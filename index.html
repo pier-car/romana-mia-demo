@@ -116,7 +116,7 @@
         </div>
         <div id="recensioni-grid" class="recensioni-grid"></div>
         <div class="recensioni-cta animate-on-scroll">
-            <a href="https://www.google.com/maps/place/Romana+Mia+Pizza+Al+Taglio+Gourmet/@45.0700,7.6858,17z" target="_blank" rel="noopener" class="btn-outline" style="margin: 0 auto; display: inline-flex;">
+            <a data-config-href="{googleMapsReviewLink}" href="#" target="_blank" rel="noopener" class="btn-google-reviews">
                 <i class="fa-brands fa-google"></i> Leggi le nostre 450+ recensioni su Google
             </a>
         </div>
@@ -305,9 +305,9 @@
 </a>
 
 <!-- ===== BACK TO TOP ===== -->
-<a id="back-to-top" href="#home" aria-label="Torna su">
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
     <i class="fa-solid fa-chevron-up"></i>
-</a>
+</button>
 
 <script src="config.js"></script>
 <script>
