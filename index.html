@@ -3,392 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atelier Gioberti — Eccellenza Artigiana a Torino Crocetta</title>
-    <meta name="description" content="Atelier Gioberti, Chiara Sartori: sartoria su misura, consulenza di stile e creazioni d'autore a Torino Crocetta. Passione, tradizione torinese e cura del dettaglio dal 1987.">
-    <!-- Verifica Google Search Console: inserisci il codice qui sotto -->
+    <title>Romana Mia — Pizza al Taglio Gourmet a Torino</title>
+    <meta name="description" content="Romana Mia: la vera pizza romana in teglia a Torino. Scrocchiarella, ingredienti DOP e IGP, prezzi al peso. Via Mercanti 3/B, aperto tutti i giorni 11:00–21:30.">
     <meta name="google-site-verification" content="">
-    <!-- URL canonico: aggiorna con l'URL reale dopo il deploy -->
     <link rel="canonical" href="">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Atelier Gioberti — Eccellenza Artigiana a Torino">
-    <meta property="og:description" content="Sartoria su misura, consulenza di stile e creazioni d'autore nel cuore di Torino Crocetta.">
-    <meta property="og:image" content="images/og-cover.jpg">
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="Romana Mia — Pizza al Taglio Gourmet a Torino">
+    <meta property="og:description" content="La vera pizza romana in teglia a Torino. Scrocchiarella, ingredienti premium. Via Mercanti 3/B.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json" id="schema-org"></script>
 </head>
 <body>
 
-    <header id="main-header">
-        <div class="container nav-wrapper">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">
-                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/>
-                        <circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1" fill="none"/>
-                        <circle cx="16" cy="16" r="3" fill="currentColor"/>
-                        <line x1="16" y1="2" x2="16" y2="7" stroke="currentColor" stroke-width="1.2"/>
-                        <line x1="16" y1="25" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/>
-                        <line x1="2" y1="16" x2="7" y2="16" stroke="currentColor" stroke-width="1.2"/>
-                        <line x1="25" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.2"/>
-                    </svg>
-                </div>
-                <span data-config="nomeAzienda">Atelier Gioberti</span>
+<!-- ===== HEADER ===== -->
+<header id="main-header">
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">
+            <div class="logo-icon">🍕</div>
+            <span><em>Romana</em> Mia</span>
+        </a>
+        <nav class="desktop-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="index.html#menu">Menu</a>
+            <a href="galleria.html">Galleria</a>
+            <a href="contatti.html">Contatti</a>
+        </nav>
+        <div class="header-right">
+            <a data-config-href="tel:{telefonoHref}" href="#" class="phone-cta">
+                <i class="fa-solid fa-phone"></i>
+                <span data-config="telefono">011 198 6630</span>
             </a>
-            <nav class="desktop-menu">
-                <a href="index.html" style="color:var(--accent)">Home</a>
-                <a href="servizi.html">Eccellenze</a>
-                <a href="galleria.html">Galleria</a>
-                <a href="contatti.html">Contatti</a>
-            </nav>
-            <div class="header-right">
-                <a data-config-href="tel:{telefonoHref}" href="#" class="phone-cta"><i class="fa-solid fa-phone"></i> <span data-config="telefono">011 567 8901</span></a>
-                <a href="contatti.html#preventivo" class="btn-red desktop-btn">Prenota un Appuntamento</a>
-                <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
-            </div>
+            <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Ordina
+            </a>
         </div>
-    </header>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="index.html">Home</a>
-        <a href="servizi.html">Le Nostre Eccellenze</a>
-        <a href="galleria.html">Galleria</a>
-        <a href="contatti.html">Contatti</a>
-        <a href="contatti.html#preventivo" class="btn-red" style="text-align:center; margin-top:20px; justify-content: center;">Prenota un Appuntamento</a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
+    <nav class="mobile-menu" id="mobile-menu">
+        <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="index.html#menu"><i class="fa-solid fa-pizza-slice"></i> Menu</a>
+        <a href="galleria.html"><i class="fa-solid fa-images"></i> Galleria</a>
+        <a href="contatti.html"><i class="fa-solid fa-location-dot"></i> Contatti</a>
+        <div class="mobile-cta">
+            <a data-config-href="tel:{telefonoHref}" href="#" class="btn-outline"><i class="fa-solid fa-phone"></i> Chiama</a>
+            <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp</a>
+        </div>
+    </nav>
+</header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <span class="pill-badge">Torino Crocetta — dal <span data-config="annoFondazione">1987</span></span>
-                <h1>L'Arte di Vestire <br><span>con Eleganza Senza Tempo</span></h1>
-                <p>Ogni creazione nasce da un dialogo attento tra l'artigiana e chi la indossa. Tessuti di pregio, tagli studiati sul corpo e una cura del dettaglio che trasforma ogni capo in qualcosa di unico.</p>
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-eyebrow">🍕 Pizza al Taglio Gourmet · Torino</span>
+        <h1>La vera pizza romana<br>in <em>teglia</em> a Torino</h1>
+        <p>Scrocchiarella, ingredienti premium, fatta al momento.<br>
+           Impasto ad alta idratazione con 48h di maturazione.</p>
+        <div class="hero-buttons">
+            <a href="#menu" class="btn-red"><i class="fa-solid fa-pizza-slice"></i> Vedi il Menu</a>
+            <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp
+            </a>
+        </div>
+        <div class="hero-trust">
+            <div class="hero-trust-item">
+                <strong>🫓 Impasto Romano</strong>
+                <span>Scrocchiarella autentica</span>
+            </div>
+            <div class="hero-trust-item">
+                <strong>⭐ Ingredienti Premium</strong>
+                <span>DOP, IGP, artigianali</span>
+            </div>
+            <div class="hero-trust-item">
+                <strong>450+ Recensioni ⭐</strong>
+                <span>Su Google Maps</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="hero-actions">
-                    <a href="contatti.html#preventivo" class="btn-red">Prenota un Appuntamento <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="servizi.html" class="btn-outline">Le Nostre Eccellenze</a>
-                </div>
+<!-- ===== MENU SECTION ===== -->
+<section class="menu-section" id="menu">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-eyebrow">Il Nostro Menu</span>
+            <div class="section-divider"></div>
+            <h2>La Nostra Pala 🍕</h2>
+            <p>Pizze in teglia selezionate con ingredienti di prima scelta. Tutto preparato fresco ogni giorno.</p>
+        </div>
+        <div id="menu-grid"></div>
+        <p class="menu-note animate-on-scroll">
+            <i class="fa-solid fa-info-circle"></i>
+            Tutti i prezzi al banco · Fetta minima 100g · Menu soggetto a variazioni stagionali
+        </p>
+    </div>
+</section>
 
-                <div class="trust-row">
-                    <div class="trust-item">
-                        <div class="trust-icon"><i class="fa-solid fa-scissors"></i></div>
-                        <div class="trust-text">
-                            <strong>Su Misura</strong>
-                            <span>Ogni capo è unico</span>
-                        </div>
+<!-- ===== RECENSIONI SECTION ===== -->
+<section class="recensioni-section" id="recensioni">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-eyebrow">Cosa Dicono di Noi</span>
+            <div class="section-divider"></div>
+            <h2>Dicono di Noi ❤️</h2>
+            <p>450+ recensioni su Google. La nostra soddisfazione è la tua pizza perfetta.</p>
+        </div>
+        <div id="recensioni-grid" class="recensioni-grid"></div>
+        <div class="recensioni-cta animate-on-scroll">
+            <a href="https://www.google.com/maps/place/Romana+Mia+Pizza+Al+Taglio+Gourmet/@45.0700,7.6858,17z" target="_blank" rel="noopener" class="btn-outline" style="margin: 0 auto; display: inline-flex;">
+                <i class="fa-brands fa-google"></i> Leggi le nostre 450+ recensioni su Google
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT SECTION ===== -->
+<section class="about-section" id="storia">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text animate-on-scroll">
+                <span class="label">La Nostra Storia</span>
+                <h2>Nati a Roma,<br>cresciuti a Torino</h2>
+                <p>Dal 2018 portiamo la tradizione della pizza romana in teglia nel cuore del centro storico di Torino. 
+                   La nostra missione è semplice: fare la pizza come si fa a Roma, senza compromessi.</p>
+                <p>Ogni mattina l'impasto viene preparato con farina di grano tenero di tipo 1, acqua, lievito madre e 
+                   un pizzico di sale marino. Poi riposa per almeno 48 ore in cella di lievitazione a temperatura controllata, 
+                   sviluppando quella leggerezza e quella croccantezza — la <strong>scrocchiarella</strong> — che ci ha resi famosi.</p>
+                <p>Gli ingredienti? Solo i migliori: Pomodoro San Marzano DOP, Fior di Latte campano, Mortadella IGP, 
+                   Pecorino Romano DOP. Perché la qualità si sente, e i nostri clienti lo sanno.</p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <strong>2018</strong>
+                        <span>Anno di apertura</span>
                     </div>
-                    <div class="trust-item">
-                        <div class="trust-icon"><i class="fa-solid fa-gem"></i></div>
-                        <div class="trust-text">
-                            <strong>Tessuti di Pregio</strong>
-                            <span>Selezione accurata</span>
-                        </div>
+                    <div class="about-stat">
+                        <strong>48h</strong>
+                        <span>Maturazione impasto</span>
                     </div>
-                    <div class="trust-item">
-                        <div class="trust-icon"><i class="fa-solid fa-star"></i></div>
-                        <div class="trust-text">
-                            <strong><span data-config="anniEsperienza">35+</span> Anni</strong>
-                            <span>Tradizione Torinese</span>
-                        </div>
+                    <div class="about-stat">
+                        <strong>450+</strong>
+                        <span>Recensioni Google</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="servizi" class="services-section animate-on-scroll">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-title">Il Nostro Atelier</span>
-                <h2 class="main-title">Le Nostre Eccellenze</h2>
-            </div>
-
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="icon-box icon-red"><i class="fa-solid fa-scissors"></i></div>
-                    <h3>Sartoria su Misura</h3>
-                    <p>Il cuore dell'Atelier Gioberti. Ogni abito nasce da una misurazione meticolosa e da una serie di prove che garantiscono un risultato impeccabile. Tessuti selezionati a mano, tagli che valorizzano la silhouette, rifinitura al punto. Non produciamo capi: costruiamo identità da indossare.</p>
-                    <a href="servizi.html" class="link-arrow">Scopri il Servizio <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="about-image animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=700&auto=format&fit=crop" alt="Pizza Romana Mia - Margherita fresca">
+                <div class="about-image-badge">
+                    🍅 Pomodoro<br>San Marzano DOP
                 </div>
-                <div class="service-card">
-                    <div class="icon-box icon-blue"><i class="fa-solid fa-crown"></i></div>
-                    <h3>Abiti da Cerimonia</h3>
-                    <p>Abiti da sposa, madrina e cerimonia realizzati con la stessa dedizione di sempre. Ogni momento speciale merita un capo che resti impresso nel ricordo.</p>
-                    <a href="servizi.html" class="link-arrow">Scopri il Servizio <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-orange"><i class="fa-solid fa-palette"></i></div>
-                    <h3>Consulenza di Stile</h3>
-                    <p>Un incontro riservato con Chiara Sartori per definire il vostro guardaroba ideale. Colori, forme, occasioni: tutto armonizzato alla vostra personalità.</p>
-                    <a href="servizi.html" class="link-arrow">Scopri il Servizio <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-green"><i class="fa-solid fa-shirt"></i></div>
-                    <h3>Guardaroba Curato</h3>
-                    <p>Selezione e coordinamento di un guardaroba completo. Qualità al posto della quantità, pezzi duraturi che resistono alle mode passeggere.</p>
-                    <a href="servizi.html" class="link-arrow">Scopri il Servizio <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-purple"><i class="fa-solid fa-ring"></i></div>
-                    <h3>Accessori & Bijoux</h3>
-                    <p>Cinture, borse e gioielli d'autore selezionati per completare ogni outfit con un tocco di carattere. Solo pezzi con una storia da raccontare.</p>
-                    <a href="servizi.html" class="link-arrow">Scopri il Servizio <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="icon-box icon-red"><i class="fa-solid fa-thread"></i></div>
-                    <h3>Restauro & Alterazioni</h3>
-                    <p>Dare nuova vita a un capo amato è un atto di rispetto verso il tessuto e la memoria. Restauro, alterazioni e rimessa a norma con la stessa cura della creazione originale. Perché i capi che parlano di noi meritano di durare nel tempo.</p>
-                    <a href="servizi.html" class="link-arrow">Scopri il Servizio <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <p class="services-carousel-hint"><i class="fa-solid fa-chevron-left"></i> scorri per scoprire <i class="fa-solid fa-chevron-right"></i></p>
-
-            <div style="text-align: center; margin-top: 56px;">
-                <a href="servizi.html" class="btn-red">Scopri Tutte le Eccellenze <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="galleria" class="gallery-section animate-on-scroll">
-        <div class="container">
-            <div class="section-header">
-                <span class="sub-title">Galleria</span>
-                <h2 class="main-title">Ogni Creazione, una Storia da Indossare</h2>
+<!-- ===== GALLERY PREVIEW ===== -->
+<section class="gallery-preview">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <span class="section-eyebrow">Le Nostre Pizze</span>
+            <div class="section-divider"></div>
+            <h2>Un Assaggio con gli Occhi 📸</h2>
+            <p>Ogni pizza è un'opera d'arte — fatta per essere ammirata e poi divorata.</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Pizza al taglio classica" loading="lazy">
+                <div class="gallery-item-overlay">🔍</div>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Sartoria su misura Torino" loading="lazy"><div class="overlay-text">Abito su Misura — Primavera</div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop" alt="Atelier Gioberti Torino" loading="lazy"><div class="overlay-text">L'Atelier — Crocetta</div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600&auto=format&fit=crop" alt="Moda artigianale" loading="lazy"><div class="overlay-text">Creazione Autunnale</div></div>
-                <div class="gallery-item"><img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600&auto=format&fit=crop" alt="Accessori di lusso" loading="lazy"><div class="overlay-text">Accessori d'Autore</div></div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=600&auto=format&fit=crop" alt="Margherita fresca" loading="lazy">
+                <div class="gallery-item-overlay">🔍</div>
             </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <a href="galleria.html" class="btn-outline">Vedi la Galleria Completa <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="gallery-item animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop" alt="Pizza gourmet" loading="lazy">
+                <div class="gallery-item-overlay">🔍</div>
+            </div>
+            <div class="gallery-item animate-on-scroll">
+                <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop" alt="Pizza al taglio dettaglio" loading="lazy">
+                <div class="gallery-item-overlay">🔍</div>
             </div>
         </div>
-    </section>
-
-    <section class="section-padding animate-on-scroll" style="background: var(--bg-secondary);">
-        <div class="container about-layout">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop" alt="Chiara Sartori all'atelier" class="titolare-img" loading="lazy">
-                <div class="floating-card">
-                    <h4><span data-config="titolare">Chiara Sartori</span></h4>
-                    <span style="color: var(--text-secondary); font-size: 0.82rem; font-family: 'Montserrat', sans-serif;">Fondatrice & Maître Sartore</span>
-                </div>
-            </div>
-            <div class="about-text">
-                <span class="sub-title">Il Saper Fare</span>
-                <h2 class="main-title">Trentacinque Anni di Passione per il Dettaglio</h2>
-                <p style="color:var(--text-secondary); margin: 20px 0; font-family: 'Montserrat', sans-serif;">
-                    Dal 1987, <strong style="color: var(--text-primary);">Chiara Sartori</strong> cuce a Torino con un principio immutabile: ogni capo merita il tempo che richiede. L'atelier di Corso Galileo Ferraris è un luogo dove la fretta non entra. Qui, tessuti e persone si incontrano in un dialogo lento e prezioso.
-                </p>
-                <p style="color:var(--text-secondary); font-family: 'Montserrat', sans-serif;">
-                    La tradizione sartoriale piemontese incontra una sensibilità contemporanea: il risultato è un guardaroba che dura, che si porta con naturalezza, che racconta chi siete.
-                </p>
-                <div class="check-list">
-                    <div class="check-item"><div class="check-circle">✓</div> Sartoria su Misura</div>
-                    <div class="check-item"><div class="check-circle">✓</div> Abiti da Cerimonia</div>
-                    <div class="check-item"><div class="check-circle">✓</div> Consulenza di Stile</div>
-                    <div class="check-item"><div class="check-circle">✓</div> Restauro & Alterazioni</div>
-                </div>
-                <div class="stats">
-                    <div><div class="stat-num"><span data-config="anniEsperienza">35+</span></div><div class="stat-label">Anni di Esperienza</div></div>
-                    <div><div class="stat-num"><span data-config="numeroProgetti">2.000+</span></div><div class="stat-label">Capi Realizzati</div></div>
-                </div>
-                <br>
-                <a href="contatti.html#preventivo" class="btn-red">Vieni a Trovarci <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+        <div class="gallery-cta animate-on-scroll">
+            <a href="galleria.html" class="btn-outline"><i class="fa-solid fa-images"></i> Vedi tutta la Galleria</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="cta-section">
-        <div class="cta-pattern"></div>
-        <div class="container cta-content">
-            <span class="sub-title" style="display:block; margin-bottom: 16px; color: var(--accent);">Vieni a Trovarci</span>
-            <h2>Pronti a Creare Qualcosa di Vostro?</h2>
-            <p>Ogni appuntamento è un momento dedicato interamente a voi. Ascolto, consulenza e qualità: iniziate il dialogo con Chiara e scoprite cosa significa avere un capo fatto su misura.</p>
-            <div class="cta-form-row">
-                <a href="contatti.html#preventivo" class="btn-red">Prenota un Appuntamento <i class="fa-solid fa-arrow-right"></i></a>
-                <a data-config-href="tel:{telefonoHref}" href="#" class="btn-outline" style="border-color: rgba(249,247,242,0.3); color: #F9F7F2;">
-                    <i class="fa-solid fa-phone"></i> <span data-config="telefono">011 567 8901</span>
+<!-- ===== CTA SECTION ===== -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-box animate-on-scroll">
+            <h2>Vieni a Trovarci 📍</h2>
+            <p>Siamo nel cuore di Torino, vicino al Mercato. Ti aspettiamo tutti i giorni per farti assaggiare la vera pizza romana.</p>
+            <div class="cta-info">
+                <div class="cta-info-item">
+                    <strong><i class="fa-solid fa-location-dot" style="color:var(--accent)"></i> Dove siamo</strong>
+                    <span data-config="indirizzo">Via Mercanti 3/B</span>
+                    <span data-config="citta">Torino</span>
+                </div>
+                <div class="cta-info-item">
+                    <strong><i class="fa-solid fa-clock" style="color:var(--accent)"></i> Orari</strong>
+                    <span data-config="orariSettimana">Lun–Dom: 11:00–15:00 / 17:00–21:30</span>
+                </div>
+                <div class="cta-info-item">
+                    <strong><i class="fa-solid fa-phone" style="color:var(--accent)"></i> Telefono</strong>
+                    <a data-config-href="tel:{telefonoHref}" href="#" data-config="telefono">011 198 6630</a>
+                </div>
+            </div>
+            <div class="cta-buttons">
+                <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener">
+                    <i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp
+                </a>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Mercanti,+3B,+10122+Torino+TO" target="_blank" rel="noopener" class="btn-outline">
+                    <i class="fa-solid fa-map"></i> Come Arrivare
+                </a>
+                <a href="contatti.html" class="btn-red">
+                    <i class="fa-solid fa-envelope"></i> Contattaci
                 </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <div class="footer-logo">
-                    <div class="logo-icon">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/>
-                            <circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1" fill="none"/>
-                            <circle cx="16" cy="16" r="3" fill="currentColor"/>
-                            <line x1="16" y1="2" x2="16" y2="7" stroke="currentColor" stroke-width="1.2"/>
-                            <line x1="16" y1="25" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/>
-                            <line x1="2" y1="16" x2="7" y2="16" stroke="currentColor" stroke-width="1.2"/>
-                            <line x1="25" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.2"/>
-                        </svg>
-                    </div>
-                    <div class="logo-text"><span data-config="nomeAzienda">Atelier Gioberti</span><br><span><span data-config="slogan">Eccellenza Artigiana dal 1987</span></span></div>
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🍕</div>
+                    <span><em>Romana</em> Mia</span>
+                </a>
+                <p>La vera pizza romana in teglia a Torino. Ingredienti DOP, impasto artigianale, scrocchiarella come da tradizione.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/pizzeriaromanamia/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener" aria-label="Google Maps">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
                 </div>
-                <p class="footer-desc"><span data-config="descrizioneBreve">Sartoria su misura e consulenza di stile nel cuore di Torino Crocetta. Passione, tradizione e cura del dettaglio in ogni creazione.</span></p>
-                <a data-config-href="https://wa.me/{whatsapp}" href="#" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Scrivici su WhatsApp</a>
             </div>
-
             <div class="footer-col">
                 <h4>Navigazione</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="servizi.html">Le Nostre Eccellenze</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="servizi.html">Il Metodo</a></li>
                     <li><a href="galleria.html">Galleria</a></li>
-                    <li><a href="contatti.html">Contattaci</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
                 </ul>
             </div>
-
             <div class="footer-col">
-                <h4>Eccellenze</h4>
+                <h4>Orari</h4>
                 <ul>
-                    <li><a href="servizi.html">Sartoria su Misura</a></li>
-                    <li><a href="servizi.html">Abiti da Cerimonia</a></li>
-                    <li><a href="servizi.html">Consulenza di Stile</a></li>
-                    <li><a href="servizi.html">Guardaroba Curato</a></li>
-                    <li><a href="servizi.html">Accessori & Bijoux</a></li>
-                    <li><a href="servizi.html">Restauro & Alterazioni</a></li>
+                    <li><span data-config="orariSettimana">Lun–Dom: 11:00–15:00 / 17:00–21:30</span></li>
+                    <li><span data-config="orariSabato">Aperto tutti i giorni</span></li>
                 </ul>
             </div>
-
             <div class="footer-col">
-                <h4>Dove Siamo</h4>
-                <ul class="contact-list">
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <div>
-                            <strong><a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener noreferrer" style="color:#E8E0D0; text-decoration: none;"><span data-config="indirizzo">Corso Galileo Ferraris 12</span></a></strong>
-                            <span><span data-config="citta">Torino</span> — Quartiere Crocetta</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone"></i>
-                        <div>
-                            <strong><a data-config-href="tel:{telefonoHref}" href="#" style="color:#E8E0D0; text-decoration: none;" data-config="telefono">011 567 8901</a></strong>
-                            <span>Chiamaci per fissare un appuntamento</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <div>
-                            <strong><a href="contatti.html#preventivo" style="color:#E8E0D0; text-decoration: none;"><span data-config="email">info@ateliergioberti.it</span></a></strong>
-                            <span>Scrivici in qualsiasi momento</span>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-clock"></i>
-                        <div>
-                            <strong><span data-config="orariSettimana">Mar – Sab: 10:00 – 19:00</span></strong>
-                            <span><span data-config="orariSabato">Lun: su appuntamento</span></span>
-                        </div>
-                    </li>
+                <h4>Contatti</h4>
+                <ul>
+                    <li><a data-config-href="tel:{telefonoHref}" href="#"><i class="fa-solid fa-phone fa-xs"></i> <span data-config="telefono">011 198 6630</span></a></li>
+                    <li><a href="mailto:info@romanamia.it"><i class="fa-solid fa-envelope fa-xs"></i> <span data-config="email">info@romanamia.it</span></a></li>
+                    <li><span><i class="fa-solid fa-location-dot fa-xs"></i> <span data-config="indirizzo">Via Mercanti 3/B</span>, <span data-config="citta">Torino</span></span></li>
                 </ul>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <div class="container bottom-flex">
-                <div class="bottom-left">
-                    &copy; <span data-anno></span> <span data-config="nomeAzienda">Atelier Gioberti</span>. P.IVA <span data-config="pIva">IT09876543210</span>
-                    <div style="margin-top: 10px; font-size: 0.82rem;">
-                        <a href="privacy.html" class="legal-link">Privacy Policy</a>
-                        <span style="opacity: 0.4; margin: 0 6px;">|</span>
-                        <a href="cookie.html" class="legal-link">Cookie Policy</a>
-                        <span style="opacity: 0.4; margin: 0 6px;">|</span>
-                        <a href="#" onclick="reopenBanner(); return false;" class="legal-link" style="text-decoration: underline;">Gestisci Cookie</a>
-                    </div>
-                </div>
+            <p>© <span data-anno></span> <span data-config="nomeAzienda">Romana Mia</span> — P.IVA <span data-config="pIva">IT10123456789</span></p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="cookie.html">Cookie Policy</a>
             </div>
-        </div>
-    </footer>
-
-    <div id="cookie-banner">
-        <p>
-            Utilizziamo cookie tecnici e di terze parti (Mappe) per migliorare la tua esperienza.
-            Puoi accettare o rifiutare.
-            Leggi la <a href="cookie.html" style="color: var(--accent); text-decoration: underline;">Cookie Policy</a>.
-        </p>
-        <div class="cookie-buttons">
-            <button onclick="rejectCookies()" class="btn-cookie-outline">Rifiuta</button>
-            <button onclick="acceptCookies()" class="btn-cookie-fill">Accetta</button>
         </div>
     </div>
+</footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a data-config-href="https://wa.me/{whatsapp}" href="#" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+<!-- ===== COOKIE BANNER ===== -->
+<div id="cookie-banner" style="display:none;">
+    <p>Utilizziamo cookie tecnici e, previo consenso, cookie di terze parti (Google Maps) per migliorare la tua esperienza. 
+       <a href="cookie.html">Cookie Policy</a> · <a href="privacy.html">Privacy Policy</a></p>
+    <div class="cookie-buttons">
+        <button class="btn-cookie-reject" id="cookie-reject">Rifiuta</button>
+        <button class="btn-cookie-accept" id="cookie-accept">Accetta</button>
+    </div>
+</div>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
-        <i class="fa-solid fa-chevron-up"></i>
-    </button>
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a id="whatsapp-float" data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" target="_blank" rel="noopener" aria-label="Ordina su WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
 
-    <!-- Schema.org LocalBusiness -->
-    <script type="application/ld+json" id="schema-org"></script>
+<!-- ===== BACK TO TOP ===== -->
+<a id="back-to-top" href="#home" aria-label="Torna su">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
 
-    <script>
-        // Sticky header — shrink on scroll
-        window.addEventListener('scroll', function () {
-            const header = document.getElementById('main-header');
-            if (header) {
-                if (window.scrollY > 60) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            }
-            // Back to top — show after 50% of page height
-            const btt = document.getElementById('back-to-top');
-            if (btt) {
-                const halfway = (document.documentElement.scrollHeight - window.innerHeight) * 0.5;
-                if (window.scrollY > halfway) { btt.classList.add('visible'); }
-                else { btt.classList.remove('visible'); }
-            }
+<script src="config.js"></script>
+<script>
+(function () {
+    // --- Sticky header ---
+    var header = document.getElementById('main-header');
+    window.addEventListener('scroll', function () {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+        var btt = document.getElementById('back-to-top');
+        if (btt) btt.classList.toggle('visible', window.scrollY > 300);
+    }, { passive: true });
+
+    // --- Hamburger ---
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+        btn.addEventListener('click', function () {
+            btn.classList.toggle('open');
+            menu.classList.toggle('open');
         });
-
-        // Scroll animations
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+        menu.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                btn.classList.remove('open');
+                menu.classList.remove('open');
             });
-        }, { threshold: 0.08 });
-        document.querySelectorAll('.animate-on-scroll').forEach(function (el) { observer.observe(el); });
-    </script>
+        });
+    }
 
-    <script>
-        // Menu Mobile
-        function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            if (menu) menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
-        }
-        // Logica Cookie
-        function acceptCookies() {
-            document.getElementById('cookie-banner').classList.remove('show');
-            localStorage.setItem('cookieConsent', 'accepted');
-        }
-        function rejectCookies() {
-            document.getElementById('cookie-banner').classList.remove('show');
-            localStorage.setItem('cookieConsent', 'rejected');
-        }
-        function reopenBanner() {
-            document.getElementById('cookie-banner').classList.add('show');
-        }
-        window.addEventListener('load', function () {
-            if (!localStorage.getItem('cookieConsent')) {
-                setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 1200);
+    // --- Animate on scroll ---
+    function checkVisible() {
+        document.querySelectorAll('.animate-on-scroll:not(.visible)').forEach(function (el) {
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 80) {
+                el.classList.add('visible');
             }
         });
-    </script>
-    <script src="config.js"></script>
+    }
+    window.addEventListener('scroll', checkVisible, { passive: true });
+    window.addEventListener('load', checkVisible);
+    setTimeout(checkVisible, 200);
+
+    // --- Cookie banner ---
+    var consent = localStorage.getItem('cookieConsent');
+    var banner = document.getElementById('cookie-banner');
+    if (!consent && banner) {
+        setTimeout(function () { banner.style.display = 'flex'; }, 1500);
+    }
+    var acceptBtn = document.getElementById('cookie-accept');
+    var rejectBtn = document.getElementById('cookie-reject');
+    if (acceptBtn) acceptBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+        if (typeof window.loadConsentedMap === 'function') window.loadConsentedMap();
+    });
+    if (rejectBtn) rejectBtn.addEventListener('click', function () {
+        localStorage.setItem('cookieConsent', 'rejected');
+        banner.style.display = 'none';
+    });
+
+    // --- Smooth scroll for anchor links ---
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+            var target = document.querySelector(a.getAttribute('href'));
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+})();
+</script>
 </body>
 </html>
