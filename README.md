@@ -1,95 +1,132 @@
-# EdilPro — Template Sito Web per Imprese Edili
+# Romana Mia — Sito Web Ufficiale 🍕
 
-Template premium, moderno e responsivo per imprese edili locali. Zero dipendenze, deployabile su qualsiasi hosting statico.
+Sito web di **Romana Mia — Pizza al Taglio Gourmet**, Torino.  
+Realizzato con HTML, CSS e JavaScript vanilla. Nessun framework, nessuna dipendenza pesante.
 
-## 🚀 Setup rapido (3 passi)
+---
 
-### 1. Modifica `config.js`
-Apri il file `config.js` e compila tutte le voci nella sezione relativa al nuovo cliente:
+## 📁 Struttura File
+
+```
+romana-mia-demo/
+├── config.js          ← ⭐ FILE PRINCIPALE: modifica qui menu, orari, contatti
+├── style.css          ← Stile grafico (dark theme, Poppins)
+├── index.html         ← Home page
+├── servizi.html       ← Il Nostro Metodo
+├── galleria.html      ← Galleria fotografica
+├── contatti.html      ← Pagina contatti con form e mappa
+├── grazie.html        ← Pagina di conferma dopo invio form
+├── privacy.html       ← Privacy Policy
+├── cookie.html        ← Cookie Policy
+├── favicon.svg        ← Favicon del sito
+└── images/            ← Immagini locali (se necessario)
+```
+
+---
+
+## ✏️ Come Aggiornare il Menu
+
+Apri `config.js` e cerca la sezione `menu`. Ogni categoria ha un array `pizze`.
+
+**Per aggiungere una pizza:**
 
 ```javascript
-window.SITO = {
-  nomeAzienda:  "Nome Impresa",
-  telefono:     "320 000 0000",
-  email:        "info@esempio.it",
-  // ... tutti gli altri campi
-};
+// Nel file config.js, trova la categoria giusta e aggiungi:
+{ nome: "La Tua Nuova Pizza", ingredienti: "Ingrediente 1, Ingrediente 2, Ingrediente 3", prezzo: "4,00 €/hg" },
 ```
 
-Tutti i testi, link e dati del sito si aggiornano automaticamente.
-
-### 2. Sostituisci le immagini
-
-| File da sostituire | Descrizione |
-|---|---|
-| `images/titolare-placeholder.jpg` | Foto del titolare/squadra (sezione Chi Siamo) |
-| Hero background | URL immagine in `style.css` nella sezione `.hero` |
-
-### 3. Aggiorna i testi legali
-
-Nei file `privacy.html` e `cookie.html` cerca i segnaposto `[URL_SITO]` e sostituiscili con l'URL reale del sito.
-
----
-
-## 📁 Struttura file
-
+**Per modificare il prezzo:**
+```javascript
+{ nome: "Margherita Scrocchiarella", ingredienti: "...", prezzo: "4,00 €/hg" },
+//                                                               ↑ cambia questo
 ```
-config.js          ← Configurazione centralizzata (MODIFICA SOLO QUESTO)
-style.css          ← Stili globali
-index.html         ← Home page
-servizi.html       ← Pagina servizi
-galleria.html      ← Galleria lavori con lightbox e filtri
-contatti.html      ← Contatti + form preventivo (Netlify Forms)
-grazie.html        ← Pagina di conferma dopo invio form
-privacy.html       ← Privacy Policy (GDPR)
-cookie.html        ← Cookie Policy
-images/            ← Immagini (sostituisci i placeholder)
-favicon.svg        ← Icona browser
+
+**Per aggiungere una categoria:**
+```javascript
+{
+  categoria: "Le Speciali 🔥",
+  descrizioneCategoria: "Solo nel weekend",
+  pizze: [
+    { nome: "Pizza Speciale", ingredienti: "...", prezzo: "5,00 €/hg" },
+  ]
+},
 ```
 
 ---
 
-## 🌐 Deploy
+## ⭐ Come Aggiornare le Recensioni
+
+Nel file `config.js`, cerca l'array `recensioni`:
+
+```javascript
+{ nome: "Mario R.", stelle: 5, testo: "Fantastica pizza!", data: "1 settimana fa" },
+```
+
+- `stelle`: da 1 a 5
+- `data`: testo libero (es. "ieri", "2 settimane fa", "ottobre 2024")
+
+---
+
+## 🕐 Come Aggiornare Orari e Dati Aziendali
+
+Tutto è in `config.js` nella sezione in cima al file:
+
+```javascript
+// Orari — modifica questi valori
+orariSettimana: "Lun–Dom: 11:00–15:00 / 17:00–21:30",
+orariSabato:    "Aperto tutti i giorni",
+
+// Telefono
+telefono:    "011 198 6630",
+telefonoHref: "0111986630",   // solo cifre per href="tel:..."
+
+// Indirizzo
+indirizzo: "Via Mercanti 3/B",
+citta:     "Torino",
+```
+
+---
+
+## 🚀 Deploy
 
 ### Netlify (consigliato — gratuito)
-1. Vai su [netlify.com](https://netlify.com) → "Add new site" → "Deploy manually"
-2. Trascina l'intera cartella del sito
-3. Il form di contatto funziona automaticamente grazie all'attributo `data-netlify="true"`
+1. Crea account su [netlify.com](https://netlify.com)
+2. Trascina la cartella del sito nella dashboard Netlify
+3. Il sito va online in 30 secondi
+
+Il form di contatto funziona automaticamente con Netlify Forms (grazie all'attributo `data-netlify="true"`).
 
 ### GitHub Pages
-1. Carica i file su un repository GitHub
-2. Vai su Settings → Pages → seleziona il branch `main`
+1. Carica i file su un repository GitHub pubblico
+2. Vai in Settings → Pages → Source: `main` branch
+3. Il sito sarà disponibile su `username.github.io/repo-name`
 
 ### cPanel / Hosting tradizionale
-1. Carica tutti i file nella cartella `public_html` tramite File Manager o FTP
+1. Connettiti via FTP con FileZilla o simili
+2. Carica tutti i file nella cartella `public_html`
+3. Il sito è subito online
 
 ---
 
 ## 🔍 SEO e Google Search Console
 
-Dopo il deploy, per verificare il sito su Google Search Console:
-- Aggiungi il meta tag di verifica nel `<head>` di `index.html`:
-  `<meta name="google-site-verification" content="IL_TUO_CODICE">`
-- In alternativa, carica il file HTML di verifica fornito da Google
+1. **Verifica il sito**: inserisci il codice di verifica Google nella meta tag in ogni HTML:
+   ```html
+   <meta name="google-site-verification" content="IL_TUO_CODICE_QUI">
+   ```
+
+2. **URL canonico**: dopo il deploy, aggiorna il tag canonical in ogni pagina:
+   ```html
+   <link rel="canonical" href="https://www.romanamia.it/index.html">
+   ```
+
+3. **Schema.org**: il sito genera automaticamente il markup strutturato di tipo `Restaurant` tramite `config.js`. Google lo legge per i risultati arricchiti.
+
+4. **Sitemap**: crea un file `sitemap.xml` con gli URL delle pagine principali e caricalo su Google Search Console.
 
 ---
 
-## 🎨 Personalizzazione colori
+## 📞 Supporto
 
-Per cambiare il colore rosso del brand in ogni altro colore:
-1. Apri `style.css`
-2. Nella sezione `:root` modifica `--primary-red: #DC2626;`
-
----
-
-## ✅ Funzionalità incluse
-
-- Design responsivo (mobile-first)
-- Form preventivo con Netlify Forms
-- Galleria con filtri per categoria e lightbox
-- Floating WhatsApp button (configurabile)
-- Cookie banner GDPR-compliant
-- Animazioni scroll (IntersectionObserver)
-- Schema.org LocalBusiness (SEO strutturato)
-- Meta Open Graph per condivisioni social
-- Zero dipendenze JavaScript esterne
+Per assistenza tecnica sul sito: contatta chi ha realizzato il sito.  
+Per aggiornare contenuti: modifica solo `config.js` come descritto sopra.
