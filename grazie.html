@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grazie — Atelier Gioberti</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            display: flex; align-items: center; justify-content: center;
+            min-height: 100vh; text-align: center; background: var(--bg-primary);
+            flex-direction: column; padding: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .success-card { 
+            background: var(--bg-card);
+            padding: 52px;
+            border-radius: 2px;
+            border: 1px solid var(--border-subtle);
+            width: 100%; max-width: 520px;
+            box-shadow: var(--shadow-lg);
+        }
+        .success-icon { 
+            width: 72px; height: 72px; border-radius: 50%;
+            background: rgba(184,151,58,0.10);
+            border: 1px solid rgba(184,151,58,0.30);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.8rem; margin: 0 auto 20px;
+            color: var(--accent);
+        }
+        h1 { color: var(--text-primary); margin-bottom: 15px; font-size: 2.2rem; font-weight: 600; font-family: 'Cormorant Garamond', serif; }
+        p { color: var(--text-secondary); margin-bottom: 32px; line-height: 1.75; font-size: 1rem; font-family: 'Montserrat', sans-serif; }
+        .btn-home { 
+            background: var(--accent); color: #F9F7F2; padding: 14px 32px;
+            text-decoration: none; border-radius: 2px; font-weight: 600;
+            font-size: 0.78rem; letter-spacing: 0.10em; text-transform: uppercase;
+            transition: all 0.22s ease; display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .btn-home:hover { background: var(--accent-light); color: #1E1810; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(184,151,58,0.30); }
+        @media (max-width: 480px) {
+            .success-card { padding: 32px 20px; }
+            h1 { font-size: 1.8rem; }
+            .btn-home { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-card">
+        <div class="success-icon">✓</div>
+        <h1>Richiesta Ricevuta</h1>
+        <p>Grazie per averci contattato.<br>Chiara vi risponderà entro 24 ore per confermare l'appuntamento. Non vediamo l'ora di incontrarvi.</p>
+        <a href="index.html" class="btn-home">Torna alla Home</a>
+    </div>
+    <script src="config.js"></script>
+</body>
+</html>

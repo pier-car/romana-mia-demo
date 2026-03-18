@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti & Appuntamenti — Atelier Gioberti, Torino Crocetta</title>
+    <meta name="description" content="Prenota un appuntamento all'Atelier Gioberti di Torino Crocetta. Siamo in Corso Galileo Ferraris 12. Aperto Mar–Sab 10–19.">
+    <!-- Verifica Google Search Console: inserisci il codice qui sotto -->
+    <meta name="google-site-verification" content="">
+    <!-- URL canonico: aggiorna con l'URL reale dopo il deploy -->
+    <link rel="canonical" href="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contatti & Appuntamenti — Atelier Gioberti">
+    <meta property="og:description" content="Prenota un appuntamento al nostro atelier di Torino Crocetta.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html, body { scroll-behavior: smooth !important; }
+        .contact-section { padding: 90px 0; background: var(--bg-secondary); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: start; }
+        .left-column { display: flex; flex-direction: column; gap: 20px; }
+        .info-card { background: var(--bg-card); padding: 30px; border-radius: 2px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); }
+        .info-row { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 25px; padding-bottom: 25px; border-bottom: 1px solid var(--border-subtle); }
+        .info-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+        .info-icon { width: 45px; height: 45px; background: var(--accent-dim); color: var(--accent); border: 1px solid var(--border); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+        .info-text h4 { font-size: 0.95rem; color: var(--text-primary); margin-bottom: 5px; font-weight: 600; font-family: 'Montserrat', sans-serif; }
+        .info-text p, .info-text a { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6; text-decoration: none; transition: 0.3s; font-family: 'Montserrat', sans-serif; }
+        .info-text a:hover { color: var(--accent); }
+        .map-wrapper { height: 280px; width: 100%; border-radius: 2px; overflow: hidden; border: 1px solid var(--border-subtle); position: relative; background: var(--bg-surface); }
+        .form-card { background: var(--bg-card); padding: 40px; border-radius: 2px; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-md); display: flex; flex-direction: column; scroll-margin-top: 100px; }
+        .form-header { margin-bottom: 30px; }
+        .form-header h2 { font-size: 1.9rem; color: var(--text-primary); font-weight: 600; margin-bottom: 10px; font-family: 'Cormorant Garamond', serif; }
+        .form-header p { color: var(--text-secondary); font-family: 'Montserrat', sans-serif; line-height: 1.7; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.75rem; color: var(--text-secondary); font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em; text-transform: uppercase; }
+        .form-input, .form-textarea { width: 100%; padding: 14px 16px; border: 1px solid var(--border-subtle); border-radius: 2px; font-family: 'Montserrat', sans-serif; font-size: 0.92rem; background: rgba(249,247,242,0.8); transition: all 0.3s ease; color: var(--text-primary); }
+        .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted); }
+        .form-input:focus, .form-textarea:focus { background: #FFFFFF; border-color: var(--accent); outline: none; box-shadow: 0 0 0 3px rgba(184,151,58,0.10); }
+        .form-textarea { resize: none; height: 150px; }
+        .btn-full { width: 100%; justify-content: center; margin-top: 10px; }
+        @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } .map-wrapper { height: 300px; } }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/>
+                        <circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1" fill="none"/>
+                        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                        <line x1="16" y1="2" x2="16" y2="7" stroke="currentColor" stroke-width="1.2"/>
+                        <line x1="16" y1="25" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/>
+                        <line x1="2" y1="16" x2="7" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                        <line x1="25" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <span data-config="nomeAzienda">Atelier Gioberti</span>
+            </a>
+            <nav class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="servizi.html">Eccellenze</a>
+                <a href="galleria.html">Galleria</a>
+                <a href="contatti.html" style="color:var(--primary-red)">Contatti</a>
+            </nav>
+            <div class="header-right">
+                <a data-config-href="tel:{telefonoHref}" href="#" class="phone-cta"><i class="fa-solid fa-phone"></i> <span data-config="telefono">011 567 8901</span></a>
+                <a href="contatti.html#preventivo" class="btn-red desktop-btn">Prenota un Appuntamento</a>
+                <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Le Nostre Eccellenze</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="contatti.html#preventivo" class="btn-red" style="text-align:center; margin-top:20px; justify-content: center;">Prenota un Appuntamento</a>
+    </div>
+
+    <section class="page-hero" style="background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%); padding: 100px 0 70px; text-align: center; color: var(--text-primary); position: relative; overflow: hidden; border-bottom: 1px solid var(--border-subtle);">
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:250px;background:radial-gradient(ellipse, rgba(184,151,58,0.05) 0%, transparent 70%);pointer-events:none;"></div>
+        <div class="container" style="position:relative; z-index:1;">
+            <span class="sub-title" style="display:block; margin-bottom:16px;">Vieni a Trovarci</span>
+            <h1 style="font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600; margin-bottom: 16px; color: var(--text-primary); font-family: 'Cormorant Garamond', serif;">Prenota il Tuo Appuntamento</h1>
+            <p style="color: var(--text-secondary); font-size: 1rem; max-width: 560px; margin: 0 auto; font-family: 'Montserrat', sans-serif; line-height: 1.75;">Ogni incontro all'Atelier Gioberti è un momento dedicato interamente a voi. Ascolto, cura e qualità: iniziate il dialogo con Chiara.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="left-column">
+                    <div class="info-card">
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="info-text">
+                                <h4>Dove Siamo</h4>
+                                <p><a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener noreferrer"><span data-config="indirizzo">Corso Galileo Ferraris 12</span></a><br><span data-config="citta">Torino</span> — Quartiere Crocetta</p>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="info-text">
+                                <h4>Orari di Apertura</h4>
+                                <p>
+                                    <strong style="font-weight: 600; color: var(--text-primary);"><span data-config="orariSettimana">Mar – Sab: 10:00 – 19:00</span></strong><br>
+                                    <span data-config="orariSabato">Lun: su appuntamento</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="info-text">
+                                <h4>Chiamaci</h4>
+                                <p><a data-config-href="tel:{telefonoHref}" href="#" data-config="telefono">011 567 8901</a></p>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="info-text">
+                                <h4>Scrivici</h4>
+                                <p><a data-config-href="mailto:{email}" href="#" data-config="email">info@ateliergioberti.it</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-wrapper">
+                        <!-- Placeholder mostrato quando i cookie di terze parti non sono accettati -->
+                        <div id="map-placeholder" class="map-consent-placeholder">
+                            <div class="map-consent-inner">
+                                <div class="map-consent-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <p>Per visualizzare la mappa, accetta i cookie tecnici e di terze parti.</p>
+                                <button onclick="acceptCookiesAndLoadMap()" class="btn-red" style="margin-top:12px; padding: 10px 24px; font-size: 0.78rem;">Accetta Cookie</button>
+                            </div>
+                        </div>
+                        <!-- Iframe caricato da config.js solo se consenso accettato -->
+                        <iframe
+                            id="map-iframe"
+                            title="Mappa sede Atelier Gioberti"
+                            width="100%"
+                            height="100%"
+                            frameborder="0"
+                            scrolling="no"
+                            marginheight="0"
+                            marginwidth="0"
+                            style="display:none; border:0;">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="right-column">
+                    <div class="form-card" id="preventivo">
+                        <div class="form-header">
+                            <h2>Prenota un Appuntamento</h2>
+                            <p>Compilate il modulo e vi ricontatteremo entro 24 ore per confermare l'incontro più adatto alle vostre esigenze.</p>
+                        </div>
+
+                        <form class="contact-form" name="contatti" method="POST" data-netlify="true" action="grazie.html">
+                            <input type="hidden" name="form-name" value="contatti">
+                            <div class="form-group">
+                                <label>Nome e Cognome *</label>
+                                <input type="text" name="nome" class="form-input" placeholder="Il vostro nome" required>
+                            </div>
+                            <div class="form-grid-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label>Email *</label>
+                                    <input type="email" name="email" class="form-input" placeholder="esempio@email.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefono</label>
+                                    <input type="tel" name="telefono" class="form-input" placeholder="011 1234567">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Come possiamo aiutarvi? *</label>
+                                <textarea name="messaggio" class="form-textarea" placeholder="Descriveteci brevemente cosa cercate..." required></textarea>
+                            </div>
+                            <div class="form-group" style="display: flex; gap: 12px; align-items: center; margin-top: 15px; margin-bottom: 25px;">
+                                <input type="checkbox" id="privacy-check" name="privacy" required style="width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; flex-shrink: 0;">
+                                <label for="privacy-check" style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; cursor: pointer; margin: 0; font-family: 'Montserrat', sans-serif;">
+                                    Ho letto e accetto la <a href="privacy.html" target="_blank" rel="noopener noreferrer" style="text-decoration: underline; color: var(--accent);">Privacy Policy</a> e acconsento al trattamento dei dati personali.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-red btn-full">INVIA RICHIESTA DI APPUNTAMENTO</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/>
+                            <circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1" fill="none"/>
+                            <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                            <line x1="16" y1="2" x2="16" y2="7" stroke="currentColor" stroke-width="1.2"/>
+                            <line x1="16" y1="25" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/>
+                            <line x1="2" y1="16" x2="7" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                            <line x1="25" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text"><span data-config="nomeAzienda">Atelier Gioberti</span><br><span><span data-config="slogan">Eccellenza Artigiana dal 1987</span></span></div>
+                </div>
+                <p class="footer-desc"><span data-config="descrizioneBreve">Sartoria su misura e consulenza di stile nel cuore di Torino Crocetta.</span></p>
+                <a data-config-href="https://wa.me/{whatsapp}" href="#" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Scrivici su WhatsApp</a>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html">Le Nostre Eccellenze</a></li>
+                    <li><a href="galleria.html">Galleria</a></li>
+                    <li><a href="contatti.html">Contattaci</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Eccellenze</h4>
+                <ul>
+                    <li><a href="servizi.html">Sartoria su Misura</a></li>
+                    <li><a href="servizi.html">Abiti da Cerimonia</a></li>
+                    <li><a href="servizi.html">Consulenza di Stile</a></li>
+                    <li><a href="servizi.html">Guardaroba Curato</a></li>
+                    <li><a href="servizi.html">Accessori & Bijoux</a></li>
+                    <li><a href="servizi.html">Restauro & Alterazioni</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Dove Siamo</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong><a data-config-href="tel:{telefonoHref}" href="#" style="color:#E8E0D0; text-decoration: none;" data-config="telefono">011 567 8901</a></strong>
+                            <span>Chiamaci per un appuntamento</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong><a href="contatti.html#preventivo" style="color:#E8E0D0; text-decoration: none;"><span data-config="email">info@ateliergioberti.it</span></a></strong>
+                            <span>Scrivici in qualsiasi momento</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong><a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener noreferrer" style="color:#E8E0D0; text-decoration: none;"><span data-config="indirizzo">Corso Galileo Ferraris 12</span></a></strong>
+                            <span><span data-config="citta">Torino</span> — Crocetta</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong><span data-config="orariSettimana">Mar – Sab: 10:00 – 19:00</span></strong>
+                            <span><span data-config="orariSabato">Lun: su appuntamento</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <div class="bottom-left">
+                    &copy; <span data-anno></span> <span data-config="nomeAzienda">Atelier Gioberti</span>. P.IVA <span data-config="pIva">IT09876543210</span>
+                    <div style="margin-top: 10px; font-size: 0.85rem;">
+                        <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                        <span style="opacity: 0.5; margin: 0 5px;">|</span>
+                        <a href="cookie.html" class="legal-link">Cookie Policy</a>
+                        <span style="opacity: 0.5; margin: 0 5px;">|</span>
+                        <a href="#" onclick="reopenBanner(); return false;" class="legal-link" style="text-decoration: underline;">Gestisci Cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizziamo cookie tecnici e di terze parti (Mappe) per migliorare la tua esperienza. 
+            Puoi accettare o rifiutare.
+            Leggi la <a href="cookie.html" style="color: var(--accent); text-decoration: underline;">Cookie Policy</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button onclick="rejectCookies()" class="btn-cookie-outline">Rifiuta</button>
+            <button onclick="acceptCookies()" class="btn-cookie-fill">Accetta</button>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a data-config-href="https://wa.me/{whatsapp}" href="#" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        function toggleMenu() { 
+            const menu = document.getElementById('mobileMenu');
+            if(menu) menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex'; 
+        }
+        function acceptCookies() {
+            document.getElementById('cookie-banner').classList.remove('show');
+            localStorage.setItem('cookieConsent', 'accepted');
+            if (typeof window.loadConsentedMap === 'function') window.loadConsentedMap();
+        }
+        function acceptCookiesAndLoadMap() {
+            document.getElementById('cookie-banner').classList.remove('show');
+            localStorage.setItem('cookieConsent', 'accepted');
+            if (typeof window.loadConsentedMap === 'function') window.loadConsentedMap();
+        }
+        function rejectCookies() {
+            document.getElementById('cookie-banner').classList.remove('show');
+            localStorage.setItem('cookieConsent', 'rejected');
+            if (typeof window.loadConsentedMap === 'function') window.loadConsentedMap();
+        }
+        function reopenBanner() {
+            document.getElementById('cookie-banner').classList.add('show');
+        }
+        window.addEventListener('load', function() {
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 1000);
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (header) {
+                if (window.scrollY > 60) { header.classList.add('scrolled'); }
+                else { header.classList.remove('scrolled'); }
+            }
+            const btt = document.getElementById('back-to-top');
+            if (btt) {
+                const halfway = (document.documentElement.scrollHeight - window.innerHeight) * 0.5;
+                if (window.scrollY > halfway) { btt.classList.add('visible'); }
+                else { btt.classList.remove('visible'); }
+            }
+        });
+    </script>
+    <script src="config.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galleria — Atelier Gioberti, Torino Crocetta</title>
+    <meta name="description" content="Scopri le creazioni dell'Atelier Gioberti: abiti su misura, cerimonie, accessori e molto altro. La tradizione sartoriale torinese in ogni scatto.">
+    <!-- Verifica Google Search Console: inserisci il codice qui sotto -->
+    <meta name="google-site-verification" content="">
+    <!-- URL canonico: aggiorna con l'URL reale dopo il deploy -->
+    <link rel="canonical" href="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Galleria — Atelier Gioberti">
+    <meta property="og:description" content="Creazioni su misura, abiti da cerimonia e accessori d'autore dal cuore di Torino Crocetta.">
+    <meta property="og:image" content="images/og-cover.jpg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .gallery-hero {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            padding: 110px 0 80px;
+            text-align: center;
+            color: var(--text-primary);
+            position: relative;
+            overflow: hidden;
+        }
+        .gallery-hero::before {
+            content: '';
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px; height: 250px;
+            background: radial-gradient(ellipse, rgba(184,151,58,0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .gallery-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--border), transparent);
+        }
+        .gallery-cta {
+            background: var(--bg-secondary);
+            text-align: center;
+            padding: 100px 0;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .section-padding { background: var(--bg-primary) !important; }
+    </style>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container nav-wrapper">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/>
+                        <circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1" fill="none"/>
+                        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                        <line x1="16" y1="2" x2="16" y2="7" stroke="currentColor" stroke-width="1.2"/>
+                        <line x1="16" y1="25" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/>
+                        <line x1="2" y1="16" x2="7" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                        <line x1="25" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                    </svg>
+                </div>
+                <span data-config="nomeAzienda">Atelier Gioberti</span>
+            </a>
+            <nav class="desktop-menu">
+                <a href="index.html">Home</a>
+                <a href="servizi.html">Eccellenze</a>
+                <a href="galleria.html" style="color:var(--primary-red)">Galleria</a>
+                <a href="contatti.html">Contatti</a>
+            </nav>
+            <div class="header-right">
+                <a data-config-href="tel:{telefonoHref}" href="#" class="phone-cta"><i class="fa-solid fa-phone"></i> <span data-config="telefono">011 567 8901</span></a>
+                <a href="contatti.html#preventivo" class="btn-red desktop-btn">Prenota un Appuntamento</a>
+                <div class="mobile-menu-btn" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="servizi.html">Le Nostre Eccellenze</a>
+        <a href="galleria.html">Galleria</a>
+        <a href="contatti.html">Contatti</a>
+        <a href="contatti.html#preventivo" class="btn-red" style="text-align:center; margin-top:20px; justify-content: center;">Prenota un Appuntamento</a>
+    </div>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <span class="sub-title" style="display: block; margin-bottom: 18px;">Le Creazioni</span>
+            <h1 style="font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 600; margin-bottom: 22px; color: var(--text-primary); font-family: 'Cormorant Garamond', serif;">Ogni Capo, una Storia da Indossare</h1>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-size: 1rem; line-height: 1.75; font-family: 'Montserrat', sans-serif;">Un archivio di cura e passione. Ogni immagine racconta un incontro, una scelta, un pezzo di vita cucito con attenzione.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--bg-primary);">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterGallery('all', this)">Tutto</button>
+                <button class="filter-btn" onclick="filterGallery('sartoria', this)">Sartoria</button>
+                <button class="filter-btn" onclick="filterGallery('cerimonia', this)">Cerimonie</button>
+                <button class="filter-btn" onclick="filterGallery('accessori', this)">Accessori</button>
+                <button class="filter-btn" onclick="filterGallery('atelier', this)">L'Atelier</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="sartoria">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop" alt="Abito su misura" loading="lazy">
+                    <div class="overlay-text">Abito su Misura — Primavera</div>
+                </div>
+                <div class="gallery-item" data-category="atelier">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=600&auto=format&fit=crop" alt="L'Atelier Gioberti" loading="lazy">
+                    <div class="overlay-text">L'Atelier — Crocetta</div>
+                </div>
+                <div class="gallery-item" data-category="sartoria">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=600&auto=format&fit=crop" alt="Creazione autunnale" loading="lazy">
+                    <div class="overlay-text">Creazione Autunnale</div>
+                </div>
+                <div class="gallery-item" data-category="accessori">
+                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600&auto=format&fit=crop" alt="Accessori d'autore" loading="lazy">
+                    <div class="overlay-text">Accessori d'Autore</div>
+                </div>
+                <div class="gallery-item" data-category="cerimonia">
+                    <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=600&auto=format&fit=crop" alt="Abito da cerimonia" loading="lazy">
+                    <div class="overlay-text">Abito da Cerimonia</div>
+                </div>
+                <div class="gallery-item" data-category="sartoria">
+                    <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600&auto=format&fit=crop" alt="Il processo sartoriale" loading="lazy">
+                    <div class="overlay-text">Il Saper Fare</div>
+                </div>
+                <div class="gallery-item" data-category="atelier">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600&auto=format&fit=crop" alt="Dettaglio tessuto" loading="lazy">
+                    <div class="overlay-text">Tessuti di Pregio</div>
+                </div>
+                <div class="gallery-item" data-category="accessori">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=600&auto=format&fit=crop" alt="Selezione accessori" loading="lazy">
+                    <div class="overlay-text">Selezione Stagionale</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery-cta">
+        <div class="container">
+            <h2 style="font-size: clamp(1.6rem, 3vw, 2.4rem); color: var(--text-primary); font-weight: 600; margin-bottom: 16px; font-family: 'Cormorant Garamond', serif;">Avete qualcosa di speciale in mente?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 32px; font-family: 'Montserrat', sans-serif; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.75;">Ogni persona merita un capo che le appartenga davvero. Venite a trovarci per scoprire cosa possiamo creare insieme.</p>
+            <a href="contatti.html#preventivo" class="btn-red" style="padding-left: 30px; padding-right: 30px;">
+                Prenota un Appuntamento <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.2" fill="none" opacity="0.5"/>
+                            <circle cx="16" cy="16" r="9" stroke="currentColor" stroke-width="1" fill="none"/>
+                            <circle cx="16" cy="16" r="3" fill="currentColor"/>
+                            <line x1="16" y1="2" x2="16" y2="7" stroke="currentColor" stroke-width="1.2"/>
+                            <line x1="16" y1="25" x2="16" y2="30" stroke="currentColor" stroke-width="1.2"/>
+                            <line x1="2" y1="16" x2="7" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                            <line x1="25" y1="16" x2="30" y2="16" stroke="currentColor" stroke-width="1.2"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text"><span data-config="nomeAzienda">Atelier Gioberti</span><br><span><span data-config="slogan">Eccellenza Artigiana dal 1987</span></span></div>
+                </div>
+                <p class="footer-desc"><span data-config="descrizioneBreve">Sartoria su misura e consulenza di stile nel cuore di Torino Crocetta.</span></p>
+                <a data-config-href="https://wa.me/{whatsapp}" href="#" class="btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> Scrivici su WhatsApp</a>
+            </div>
+
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servizi.html">Le Nostre Eccellenze</a></li>
+                    <li><a href="galleria.html">Galleria</a></li>
+                    <li><a href="contatti.html">Contattaci</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Eccellenze</h4>
+                <ul>
+                    <li><a href="servizi.html">Sartoria su Misura</a></li>
+                    <li><a href="servizi.html">Abiti da Cerimonia</a></li>
+                    <li><a href="servizi.html">Consulenza di Stile</a></li>
+                    <li><a href="servizi.html">Guardaroba Curato</a></li>
+                    <li><a href="servizi.html">Accessori & Bijoux</a></li>
+                    <li><a href="servizi.html">Restauro & Alterazioni</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Dove Siamo</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <strong><a data-config-href="tel:{telefonoHref}" href="#" style="color:#E8E0D0; text-decoration: none;" data-config="telefono">011 567 8901</a></strong>
+                            <span>Chiamaci per un appuntamento</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <div>
+                            <strong><a href="contatti.html#preventivo" style="color:#E8E0D0; text-decoration: none;"><span data-config="email">info@ateliergioberti.it</span></a></strong>
+                            <span>Scrivici in qualsiasi momento</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <strong><a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener noreferrer" style="color:#E8E0D0; text-decoration: none;"><span data-config="indirizzo">Corso Galileo Ferraris 12</span></a></strong>
+                            <span><span data-config="citta">Torino</span> — Crocetta</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <strong><span data-config="orariSettimana">Mar – Sab: 10:00 – 19:00</span></strong>
+                            <span><span data-config="orariSabato">Lun: su appuntamento</span></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <div class="bottom-left">
+                    &copy; <span data-anno></span> <span data-config="nomeAzienda">Atelier Gioberti</span>. P.IVA <span data-config="pIva">IT09876543210</span>
+                    <div style="margin-top: 10px; font-size: 0.85rem;">
+                        <a href="privacy.html" class="legal-link">Privacy Policy</a>
+                        <span style="opacity: 0.5; margin: 0 5px;">|</span>
+                        <a href="cookie.html" class="legal-link">Cookie Policy</a>
+                        <span style="opacity: 0.5; margin: 0 5px;">|</span>
+                        <a href="#" onclick="reopenBanner(); return false;" class="legal-link" style="text-decoration: underline;">Gestisci Cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cookie-banner">
+        <p>
+            Utilizziamo cookie tecnici e di terze parti (Mappe) per migliorare la tua esperienza. 
+            Puoi accettare o rifiutare.
+            Leggi la <a href="cookie.html" style="color: var(--accent); text-decoration: underline;">Cookie Policy</a>.
+        </p>
+        <div class="cookie-buttons">
+            <button onclick="rejectCookies()" class="btn-cookie-outline">Rifiuta</button>
+            <button onclick="acceptCookies()" class="btn-cookie-fill">Accetta</button>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); z-index:2000; justify-content:center; align-items:center; cursor:pointer;" onclick="closeLightbox()">
+        <img id="lightbox-img" style="max-width:90%; max-height:90%; border: 2px solid white; border-radius:4px; box-shadow: 0 0 20px rgba(0,0,0,0.5);" alt="Immagine ingrandita">
+        <span aria-label="Chiudi lightbox" style="position:absolute; top:20px; right:30px; color:white; font-size:40px; font-weight:bold;">&times;</span>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a data-config-href="https://wa.me/{whatsapp}" href="#" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contattaci su WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Gallery Filter Logic
+        function filterGallery(category, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('section img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', e => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = e.target.src;
+            });
+        });
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+    </script>
+
+    <script>
+        // Menu Mobile
+        function toggleMenu() { 
+            const menu = document.getElementById('mobileMenu');
+            if(menu) menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex'; 
+        }
+        // Logica Cookie
+        function acceptCookies() {
+            document.getElementById('cookie-banner').classList.remove('show');
+            localStorage.setItem('cookieConsent', 'accepted');
+        }
+        function rejectCookies() {
+            document.getElementById('cookie-banner').classList.remove('show');
+            localStorage.setItem('cookieConsent', 'rejected');
+        }
+        function reopenBanner() {
+            document.getElementById('cookie-banner').classList.add('show');
+        }
+        window.addEventListener('load', function() {
+            if (!localStorage.getItem('cookieConsent')) {
+                setTimeout(() => document.getElementById('cookie-banner').classList.add('show'), 1000);
+            }
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('main-header');
+            if (header) {
+                if (window.scrollY > 60) { header.classList.add('scrolled'); }
+                else { header.classList.remove('scrolled'); }
+            }
+            const btt = document.getElementById('back-to-top');
+            if (btt) {
+                const halfway = (document.documentElement.scrollHeight - window.innerHeight) * 0.5;
+                if (window.scrollY > halfway) { btt.classList.add('visible'); }
+                else { btt.classList.remove('visible'); }
+            }
+        });
+    </script>
+    <script src="config.js"></script>
+</body>
+</html>
