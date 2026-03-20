@@ -16,28 +16,28 @@ window.SITO = {
   // --- IDENTITÀ AZIENDA ---
   nomeAzienda:      "Romana Mia",
   slogan:           "La vera pizza romana in teglia a Torino",
-  descrizioneBreve: "Dal 2018 portiamo la vera pizza romana in teglia nel cuore di Torino. Impasto ad alta idratazione, ingredienti DOP e IGP, scrocchiarella come da tradizione.",
+  descrizioneBreve: "Pizza al taglio gourmet nel cuore di Torino. Impasto ad alta idratazione con 48–72 ore di lievitazione, ingredienti DOP e IGP selezionati, scrocchiarella autentica come da tradizione romana. Via Marco Polo, 12/C — 4,5 ★ su Google.",
   anniEsperienza:   "6+",
   annoFondazione:   "2018",
   annoCorrente:     new Date().getFullYear(),
 
   // --- CONTATTI ---
-  telefono:         "011 198 6630",        // Numero visualizzato in pagina
-  telefonoHref:     "0111986630",          // Solo cifre, usato per href="tel:..."
+  telefono:         "011 123 4567",        // Numero visualizzato in pagina
+  telefonoHref:     "0111234567",          // Solo cifre, usato per href="tel:..."
   whatsapp:         "393476147360",        // Prefisso internazionale 39 + numero senza zero iniziale
   email:            "info@romanamia.it",
 
   // --- SEDE ---
-  indirizzo:        "Via Mercanti 3/B",
+  indirizzo:        "Via Marco Polo, 12/C",
   citta:            "Torino",
-  cap:              "10122",
+  cap:              "10129",
   provincia:        "TO",
-  mappaQuery:       "Via+Mercanti,+3B,+10122+Torino+TO",
-  mappaEmbed:       "https://maps.google.com/maps?q=Via+Mercanti,+3B,+10122+Torino+TO&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  mappaQuery:       "Via+Marco+Polo,+12C,+10129+Torino+TO",
+  mappaEmbed:       "https://maps.google.com/maps?q=Via+Marco+Polo,+12C,+10129+Torino+TO&t=&z=15&ie=UTF8&iwloc=&output=embed",
 
   // --- RECENSIONI GOOGLE ---
   // Link diretto alla scheda Google Maps per lasciare una recensione
-  googleMapsReviewLink: "https://www.google.com/maps/place/Romana+Mia+Pizza+Al+Taglio+Gourmet/@45.0700,7.6858,17z",
+  googleMapsReviewLink: "https://www.google.com/maps/place/Romana+Mia+Pizza+Al+Taglio+Gourmet/@45.0769,7.6780,17z",
 
   // --- WHATSAPP ---
   // Messaggio precompilato che il cliente troverà già scritto su WhatsApp
@@ -46,8 +46,8 @@ window.SITO = {
 
   // --- ORARI ---
   // ✏️ Modifica qui gli orari di apertura
-  orariSettimana:   "Lun–Dom: 11:00–15:00 / 17:00–21:30",
-  orariSabato:      "Aperto tutti i giorni",
+  orariSettimana:   "Lun–Sab: 11:30–15:00 / 18:30–22:00",
+  orariSabato:      "Domenica: Chiuso",
 
   // --- DATI LEGALI ---
   pIva:             "IT10123456789",
@@ -92,32 +92,40 @@ window.SITO = {
   menu: [
     {
       categoria: "Le Classiche 🍅",
-      descrizioneCategoria: "Le ricette della tradizione romana, fatte come si deve",
+      descrizioneCategoria: "La tradizione romana nella sua purezza: scrocchiarella, ingredienti onesti, sapori veri",
       pizze: [
-        { nome: "Margherita Scrocchiarella", ingredienti: "Pomodoro San Marzano DOP, Fior di Latte, Basilico", prezzo: "3,50 €/hg" },
-        { nome: "Rossa al Basilico",         ingredienti: "Pomodoro San Marzano DOP, Origano, Olio EVO",        prezzo: "2,50 €/hg" },
-        { nome: "Bianca all'Olio",           ingredienti: "Olio EVO, Sale grosso marino, Rosmarino fresco",     prezzo: "2,50 €/hg" },
-        { nome: "Cacio e Pepe",              ingredienti: "Pecorino Romano DOP, Pepe nero macinato, Fior di latte", prezzo: "3,50 €/hg" },
-        { nome: "Patate e Rosmarino",        ingredienti: "Patate, Rosmarino, Olio EVO, Sale",                  prezzo: "3,00 €/hg" },
+        { nome: "Margherita Scrocchiarella", ingredienti: "Pomodoro San Marzano DOP, Fior di Latte campano, basilico fresco, olio EVO a crudo", prezzo: "3,50 €/trancio" },
+        { nome: "Rossa al Basilico",         ingredienti: "Pomodoro San Marzano DOP, origano di Pantelleria, olio extravergine d'oliva del Garda", prezzo: "2,50 €/trancio" },
+        { nome: "Bianca all'Olio",           ingredienti: "Olio extravergine d'oliva DOP, sale di Cervia in fiocchi, rosmarino fresco", prezzo: "2,50 €/trancio" },
+        { nome: "Cacio e Pepe",              ingredienti: "Pecorino Romano DOP stagionato 36 mesi, pepe nero di Sarawak macinato al momento, Fior di Latte", prezzo: "3,50 €/trancio" },
+        { nome: "Patate e Rosmarino",        ingredienti: "Patate novelle a fettine sottili, rosmarino fresco, aglio, olio EVO profumato", prezzo: "3,00 €/trancio" },
       ]
     },
     {
       categoria: "Le Gourmet ⭐",
-      descrizioneCategoria: "Ingredienti selezionati, abbinamenti ricercati",
+      descrizioneCategoria: "Ingredienti d'eccellenza, abbinamenti che sorprendono il palato",
       pizze: [
-        { nome: "Burrata e Pomodorini",      ingredienti: "Pomodorini confit, Burrata fresca, Basilico, Origano",                        prezzo: "4,50 €/hg" },
-        { nome: "Mortadella e Pistacchio",   ingredienti: "Mortadella di Bologna IGP, Crema di pistacchio, Fior di latte",               prezzo: "4,50 €/hg" },
-        { nome: "Salmone e Rucola",          ingredienti: "Salmone norvegese affumicato, Rucola, Scamorza affumicata, Limone",           prezzo: "5,00 €/hg" },
-        { nome: "Nduja e Stracciatella",     ingredienti: "'Nduja di Spilinga, Stracciatella pugliese, Pomodoro, Basilico",              prezzo: "4,50 €/hg" },
-        { nome: "Fungi Porcini e Tartufo",   ingredienti: "Porcini trifolati, Crema di tartufo, Fior di latte, Prezzemolo",             prezzo: "5,50 €/hg" },
+        { nome: "Mortadella, Pistacchio & Stracciatella", ingredienti: "Mortadella di Bologna IGP a rosa, granella di pistacchio di Bronte DOP, stracciatella fresca di Andria", prezzo: "5,00 €/trancio" },
+        { nome: "Burrata e Pomodorini Confit",            ingredienti: "Pomodorini datterini confit al forno, burrata fresca pugliese, basilico fresco, olio EVO profumato all'aglio", prezzo: "4,50 €/trancio" },
+        { nome: "Salmone, Rucola & Scamorza",             ingredienti: "Salmone norvegese affumicato a freddo, rucola selvatica, scamorza affumicata, scorza di limone di Amalfi", prezzo: "5,00 €/trancio" },
+        { nome: "'Nduja e Stracciatella",                 ingredienti: "'Nduja artigianale di Spilinga piccante, stracciatella pugliese fresca, pomodoro San Marzano DOP, basilico", prezzo: "4,50 €/trancio" },
+        { nome: "Funghi Porcini e Tartufo",               ingredienti: "Porcini trifolati all'aglio e prezzemolo, crema di tartufo nero del Piemonte, Fior di Latte", prezzo: "5,50 €/trancio" },
+      ]
+    },
+    {
+      categoria: "Le Ripiene 🧀",
+      descrizioneCategoria: "Due strati di impasto scrocchiarella che racchiudono un cuore filante e saporito",
+      pizze: [
+        { nome: "Ripiena Classica Prosciutto & Mozzarella", ingredienti: "Prosciutto cotto alta qualità, mozzarella fiordilatte, pomodoro San Marzano DOP", prezzo: "4,00 €/trancio" },
+        { nome: "Ripiena Gourmet Spinaci & Ricotta",        ingredienti: "Ricotta di bufala campana, spinaci saltati con aglio, noce moscata, Pecorino Romano DOP", prezzo: "4,00 €/trancio" },
       ]
     },
     {
       categoria: "Le Stagionali 🌿",
-      descrizioneCategoria: "In base alla disponibilità del mercato — chiedi al bancone!",
+      descrizioneCategoria: "In base alla disponibilità del mercato — chiedi al bancone per la proposta di oggi!",
       pizze: [
-        { nome: "Del Momento",               ingredienti: "Chiedi al bancone per la proposta del giorno",                                prezzo: "variabile" },
-        { nome: "Stagionale dello Chef",     ingredienti: "Ingredienti freschi di stagione selezionati ogni settimana",                  prezzo: "variabile" },
+        { nome: "Proposta del Giorno",   ingredienti: "Chiedi al bancone per la nostra creazione del giorno con ingredienti freschissimi", prezzo: "variabile" },
+        { nome: "Stagionale dello Chef", ingredienti: "Ingredienti freschi di stagione selezionati ogni settimana direttamente dal produttore", prezzo: "variabile" },
       ]
     }
   ],
@@ -133,12 +141,9 @@ window.SITO = {
   //  { nome: "Mario R.", stelle: 5, testo: "Fantastica!", data: "1 giorno fa" },
   // ============================================================
   recensioni: [
-    { nome: "Marco T.",     stelle: 5, testo: "Pizza fantastica! La scrocchiarella è croccante al punto giusto e gli ingredienti sono di altissima qualità. La Mortadella e Pistacchio è una bomba di gusto!", data: "2 mesi fa" },
-    { nome: "Giulia R.",    stelle: 5, testo: "Finalmente una vera pizza romana a Torino! Il personale è gentilissimo e l'atmosfera è accogliente. Tornerò sicuramente.",                                     data: "3 settimane fa" },
-    { nome: "Alessandro B.", stelle: 5, testo: "La migliore pizza al taglio che abbia mai mangiato in città. La bianca all'olio è semplicemente perfetta. Prezzi onestissimi.",                               data: "1 mese fa" },
-    { nome: "Sofia M.",     stelle: 5, testo: "Impasto leggero e digeribile, condimenti freschi e abbondanti. Provate la Burrata e Pomodorini — è paradisiaca!",                                             data: "1 settimana fa" },
-    { nome: "Luca P.",      stelle: 5, testo: "Locale carino nel centro di Torino, vicino al Mercato. La Nduja e Stracciatella è la mia preferita! Staff super disponibile.",                                data: "5 giorni fa" },
-    { nome: "Elena C.",     stelle: 4, testo: "Ottima pizza al taglio gourmet! Un po' di fila all'ora di pranzo ma ne vale assolutamente la pena. La Cacio e Pepe è squisita.",                              data: "2 settimane fa" },
+    { nome: "Valentina G.", stelle: 5, testo: "Finalmente la vera pizza romana a Torino! L'impasto è incredibilmente leggero e digeribile — nonostante ne abbia mangiate tre fette non ho sentito pesantezza. La Mortadella, Pistacchio e Stracciatella è da togliere il fiato. Tornerò sicuramente!", data: "1 mese fa" },
+    { nome: "Marco T.",     stelle: 5, testo: "Ingredienti di una qualità disarmante: pomodoro vero, burrata freschissima, tutto profuma di artigianale. La scrocchiarella è esattamente come me la ricordavo da Roma. Un pezzo di capitale nel cuore di Torino. 4,5 stelle su Google sono assolutamente meritate!", data: "3 settimane fa" },
+    { nome: "Luisa F.",     stelle: 5, testo: "Personale gentilissimo e super disponibile: ci hanno fatto assaggiare diverse varianti prima di scegliere. La 'Nduja e Stracciatella ha fatto venire i brividi. Ambiente elegante e accogliente, prezzi più che onesti per la qualità offerta. Ci torno il prima possibile!", data: "2 settimane fa" },
   ],
 };
 
@@ -208,7 +213,7 @@ window.SITO = {
           "addressRegion": window.SITO.provincia,
           "addressCountry": "IT"
         },
-        "openingHours": ["Mo-Su 11:00-15:00", "Mo-Su 17:00-21:30"],
+        "openingHours": ["Mo-Sa 11:30-15:00", "Mo-Sa 18:30-22:00"],
         "foundingDate": window.SITO.annoFondazione,
         "url": "https://romanamia.it",
         "sameAs": [window.SITO.instagram]
