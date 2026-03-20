@@ -52,6 +52,7 @@
         <a href="metodo.html"><i class="fa-solid fa-star"></i> Il Metodo</a>
         <a href="contatti.html"><i class="fa-solid fa-location-dot"></i> Contatti</a>
         <div class="mobile-cta">
+            <a data-config-href="tel:{telefonoHref}" href="#" class="btn-outline"><i class="fa-solid fa-phone"></i> Chiama</a>
             <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp</a>
         </div>
     </nav>
@@ -119,6 +120,7 @@
                 <div class="footer-social">
                     <a href="https://www.instagram.com/pizzeriaromanamia/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-brands fa-google"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -163,9 +165,9 @@
 </a>
 
 <!-- ===== BACK TO TOP ===== -->
-<a id="back-to-top" href="#" aria-label="Torna su">
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
     <i class="fa-solid fa-chevron-up"></i>
-</a>
+</button>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
 <nav class="bottom-nav" aria-label="Navigazione principale">
