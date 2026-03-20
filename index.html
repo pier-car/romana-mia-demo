@@ -31,8 +31,8 @@
         </a>
         <nav class="desktop-menu">
             <a href="index.html" class="active">Home</a>
-            <a href="index.html#menu">Menu</a>
-            <a href="galleria.html">Galleria</a>
+            <a href="menu.html">Menu</a>
+            <a href="metodo.html">Il Metodo</a>
             <a href="contatti.html">Contatti</a>
         </nav>
         <div class="header-right">
@@ -50,8 +50,8 @@
     </div>
     <nav class="mobile-menu" id="mobile-menu">
         <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="index.html#menu"><i class="fa-solid fa-pizza-slice"></i> Menu</a>
-        <a href="galleria.html"><i class="fa-solid fa-images"></i> Galleria</a>
+        <a href="menu.html"><i class="fa-solid fa-pizza-slice"></i> Menu</a>
+        <a href="metodo.html"><i class="fa-solid fa-star"></i> Il Metodo</a>
         <a href="contatti.html"><i class="fa-solid fa-location-dot"></i> Contatti</a>
         <div class="mobile-cta">
             <a data-config-href="tel:{telefonoHref}" href="#" class="btn-outline"><i class="fa-solid fa-phone"></i> Chiama</a>
@@ -70,7 +70,7 @@
         <p>Impasto ad alta idratazione, lievitazione lenta 48–72 ore,<br>
            ingredienti DOP e IGP selezionati. Ogni morso racconta Roma.</p>
         <div class="hero-buttons">
-            <a href="#menu" class="btn-red"><i class="fa-solid fa-pizza-slice"></i> Vedi il Menu</a>
+            <a href="menu.html" class="btn-red"><i class="fa-solid fa-pizza-slice"></i> Vedi il Menu</a>
             <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener">
                 <i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp
             </a>
@@ -92,20 +92,45 @@
     </div>
 </section>
 
-<!-- ===== MENU SECTION ===== -->
+<!-- ===== BEST SELLERS SECTION ===== -->
 <section class="menu-section" id="menu">
     <div class="container">
         <div class="section-header animate-on-scroll">
-            <span class="section-eyebrow">Il Nostro Menu</span>
+            <span class="section-eyebrow">I Nostri Best Seller</span>
             <div class="section-divider"></div>
-            <h2>La Nostra Pala 🍕</h2>
-            <p>Pizze in teglia selezionate con ingredienti di prima scelta. Tutto preparato fresco ogni giorno — chiedi al bancone le novità del giorno.</p>
+            <h2>Le Pizze più Amate 🍕</h2>
+            <p>Le tre preferite dai nostri clienti — preparate ogni giorno con ingredienti freschi e un impasto che matura 48–72 ore.</p>
         </div>
-        <div id="menu-grid"></div>
-        <p class="menu-note animate-on-scroll">
-            <i class="fa-solid fa-info-circle"></i>
-            Tutti i prezzi al trancio · Fetta minima 100g · Menu soggetto a variazioni stagionali
-        </p>
+        <div class="menu-category-card animate-on-scroll">
+            <ul class="menu-pizza-list">
+                <li class="menu-pizza-item">
+                    <div class="menu-pizza-info">
+                        <span class="menu-pizza-nome">Margherita Scrocchiarella</span>
+                        <span class="menu-pizza-ingredienti">Pomodoro San Marzano DOP, Fior di Latte campano, basilico fresco, olio EVO a crudo</span>
+                    </div>
+                    <span class="menu-pizza-prezzo">3,50 €/trancio</span>
+                </li>
+                <li class="menu-pizza-item">
+                    <div class="menu-pizza-info">
+                        <span class="menu-pizza-nome">Mortadella, Pistacchio &amp; Stracciatella</span>
+                        <span class="menu-pizza-ingredienti">Mortadella di Bologna IGP a rosa, granella di pistacchio di Bronte DOP, stracciatella fresca di Andria</span>
+                    </div>
+                    <span class="menu-pizza-prezzo">5,00 €/trancio</span>
+                </li>
+                <li class="menu-pizza-item">
+                    <div class="menu-pizza-info">
+                        <span class="menu-pizza-nome">Funghi Porcini e Tartufo</span>
+                        <span class="menu-pizza-ingredienti">Porcini trifolati all'aglio e prezzemolo, crema di tartufo nero del Piemonte, Fior di Latte</span>
+                    </div>
+                    <span class="menu-pizza-prezzo">5,50 €/trancio</span>
+                </li>
+            </ul>
+        </div>
+        <div class="animate-on-scroll" style="text-align:center; margin-top:40px;">
+            <a href="menu.html" class="btn-red">
+                <i class="fa-solid fa-pizza-slice"></i> Scopri tutto il Menu
+            </a>
+        </div>
     </div>
 </section>
 
@@ -122,96 +147,6 @@
         <div class="recensioni-cta animate-on-scroll">
             <a data-config-href="{googleMapsReviewLink}" href="#" target="_blank" rel="noopener" class="btn-google-reviews">
                 <i class="fa-brands fa-google"></i> Leggi le nostre 67 recensioni su Google (4,5 ★)
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ===== ABOUT SECTION ===== -->
-<section class="about-section" id="storia">
-    <div class="container">
-        <div class="about-grid">
-            <div class="about-text animate-on-scroll">
-                <span class="label">La Nostra Storia</span>
-                <h2>Nati a Roma,<br>cresciuti a Torino</h2>
-                <p>Dal 2018 portiamo la tradizione della pizza romana in teglia nel cuore di Torino, 
-                   in Via Marco Polo. La nostra missione è semplice: fare la pizza come si fa a Roma, senza compromessi.</p>
-                <p>Ogni mattina l'impasto viene preparato con farina di grano tenero di tipo 1 macinata a pietra, acqua, lievito madre e 
-                   un pizzico di sale marino. Poi riposa per almeno <strong>48–72 ore</strong> in cella di lievitazione a temperatura controllata, 
-                   sviluppando quella leggerezza e quella croccantezza — la <strong>scrocchiarella</strong> — che ci ha resi famosi.</p>
-                <p>Gli ingredienti? Solo i migliori: Pomodoro San Marzano DOP, Fior di Latte campano, Mortadella di Bologna IGP, 
-                   Pecorino Romano DOP. Perché la qualità si sente al primo morso, e i nostri clienti lo sanno bene.</p>
-                <div class="about-stats">
-                    <div class="about-stat">
-                        <strong>2018</strong>
-                        <span>Anno di apertura</span>
-                    </div>
-                    <div class="about-stat">
-                        <strong>48–72h</strong>
-                        <span>Maturazione impasto</span>
-                    </div>
-                    <div class="about-stat">
-                        <strong>4,5 ★</strong>
-                        <span>Su Google Maps</span>
-                    </div>
-                </div>
-            </div>
-            <div class="about-image animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=700&auto=format&fit=crop" alt="Pizza Romana Mia - Margherita fresca">
-                <div class="about-image-badge">
-                    🍅 Pomodoro<br>San Marzano DOP
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== GALLERY PREVIEW ===== -->
-<section class="gallery-preview">
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <span class="section-eyebrow">Le Nostre Pizze</span>
-            <div class="section-divider"></div>
-            <h2>Un Assaggio con gli Occhi</h2>
-            <p>Ogni pizza è un'opera d'arte — fatta per essere ammirata e poi divorata.</p>
-        </div>
-        <div class="gallery-grid">
-            <div class="gallery-item animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="Pizza al taglio classica" loading="lazy">
-                <div class="gallery-item-overlay">🔍</div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=600&auto=format&fit=crop" alt="Margherita fresca" loading="lazy">
-                <div class="gallery-item-overlay">🔍</div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=600&auto=format&fit=crop" alt="Pizza gourmet" loading="lazy">
-                <div class="gallery-item-overlay">🔍</div>
-            </div>
-            <div class="gallery-item animate-on-scroll">
-                <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=600&auto=format&fit=crop" alt="Pizza al taglio dettaglio" loading="lazy">
-                <div class="gallery-item-overlay">🔍</div>
-            </div>
-        </div>
-        <div class="gallery-cta animate-on-scroll">
-            <a href="galleria.html" class="btn-outline"><i class="fa-solid fa-images"></i> Vedi tutta la Galleria</a>
-        </div>
-    </div>
-</section>
-
-<!-- ===== INSTAGRAM SECTION ===== -->
-<section class="instagram-section" id="instagram">
-    <div class="container">
-        <div class="section-header animate-on-scroll">
-            <span class="section-eyebrow">@pizzeriaromanamia</span>
-            <div class="section-divider"></div>
-            <h2>Direttamente dal Bancone</h2>
-            <p>Ogni giorno nuove creazioni. Seguici su Instagram per restare aggiornato.</p>
-        </div>
-        <div class="instagram-grid" id="instagram-grid"></div>
-        <div class="instagram-cta animate-on-scroll">
-            <a href="https://www.instagram.com/pizzeriaromanamia/" target="_blank" rel="noopener" class="btn-outline">
-                <i class="fa-brands fa-instagram"></i> Seguici su Instagram
             </a>
         </div>
     </div>
@@ -279,9 +214,8 @@
                 <h4>Navigazione</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#menu">Menu</a></li>
-                    <li><a href="servizi.html">Il Metodo</a></li>
-                    <li><a href="galleria.html">Galleria</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="metodo.html">Il Metodo</a></li>
                     <li><a href="contatti.html">Contatti</a></li>
                 </ul>
             </div>
@@ -318,13 +252,13 @@
         <i class="fa-solid fa-house"></i>
         <span>Home</span>
     </a>
-    <a href="index.html#menu" class="bottom-nav-item">
+    <a href="menu.html" class="bottom-nav-item">
         <i class="fa-solid fa-pizza-slice"></i>
         <span>Menu</span>
     </a>
-    <a href="galleria.html" class="bottom-nav-item">
-        <i class="fa-solid fa-images"></i>
-        <span>Galleria</span>
+    <a href="metodo.html" class="bottom-nav-item">
+        <i class="fa-solid fa-star"></i>
+        <span>Il Metodo</span>
     </a>
     <a href="contatti.html" class="bottom-nav-item">
         <i class="fa-solid fa-location-dot"></i>
