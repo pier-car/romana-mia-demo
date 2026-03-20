@@ -52,6 +52,7 @@
         <a href="metodo.html" class="active"><i class="fa-solid fa-star"></i> Il Metodo</a>
         <a href="contatti.html"><i class="fa-solid fa-location-dot"></i> Contatti</a>
         <div class="mobile-cta">
+            <a data-config-href="tel:{telefonoHref}" href="#" class="btn-outline"><i class="fa-solid fa-phone"></i> Chiama</a>
             <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp</a>
         </div>
     </nav>
@@ -78,13 +79,13 @@
             <div class="metodo-text animate-on-scroll">
                 <span class="number">01</span>
                 <h2>L'Impasto 🫓</h2>
-                <p>Tutto parte dall'impasto. La nostra ricetta utilizza farine di tipo 1 macinate a pietra, con un'idratazione superiore all'<strong>80%</strong> — molto più alta della pizza napoletana classica. Questo è il segreto della leggerezza e della croccantezza della pizza romana.</p>
-                <p>L'impasto viene lavorato a lungo, poi lasciato riposare in cella di lievitazione a temperatura controllata per <strong>48–72 ore</strong>. Questa lunga maturazione permette ai carboidrati complessi di scomporsi, rendendo la pizza più digeribile e saporita.</p>
+                <p>Tutto parte dall'impasto. La nostra ricetta utilizza <strong>farine di grani antichi</strong> macinate a pietra — varietà come il Senatore Cappelli e il Farro monococcum, selezionate per il loro profilo aromatico complesso e la superiore digeribilità. L'idratazione supera l'<strong>80%</strong> — molto più alta della pizza napoletana classica. Questo è il segreto della leggerezza e della croccantezza della pizza romana.</p>
+                <p>L'impasto viene lavorato a lungo con tecnica a freddo, poi lasciato riposare in cella di lievitazione a temperatura controllata per <strong>72 ore</strong>. Questa lievitazione lenta e profonda permette ai carboidrati complessi di scomporsi efficacemente, rendendo la pizza straordinariamente digeribile e ricca di sapore.</p>
                 <p>Il risultato? Un impasto ad alveolatura larga, leggero come una nuvola, con una crosta che scrocchia al morso: la <strong>scrocchiarella</strong>.</p>
                 <div class="metodo-tags">
                     <span class="metodo-tag">Idratazione 80%+</span>
-                    <span class="metodo-tag">48–72h di maturazione</span>
-                    <span class="metodo-tag">Farina tipo 1</span>
+                    <span class="metodo-tag">Lievitazione 72 ore</span>
+                    <span class="metodo-tag">Farine di Grani Antichi</span>
                     <span class="metodo-tag">Lievito madre</span>
                 </div>
             </div>
@@ -220,6 +221,7 @@
                 <div class="footer-social">
                     <a href="https://www.instagram.com/pizzeriaromanamia/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-brands fa-google"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -264,9 +266,9 @@
 </a>
 
 <!-- ===== BACK TO TOP ===== -->
-<a id="back-to-top" href="#" aria-label="Torna su">
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
     <i class="fa-solid fa-chevron-up"></i>
-</a>
+</button>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
 <nav class="bottom-nav" aria-label="Navigazione principale">

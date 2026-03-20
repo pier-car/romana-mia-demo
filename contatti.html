@@ -2,7 +2,8 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">    <title>Contatti — Romana Mia, Pizza al Taglio Gourmet Torino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contatti — Romana Mia, Pizza al Taglio Gourmet Torino</title>
     <meta name="description" content="Contatta Romana Mia: Via Marco Polo, 12/C, Torino. Telefono, WhatsApp, email e mappa. Aperto Lun–Sab 11:30–15:00 / 18:30–22:00.">
     <meta name="google-site-verification" content="">
     <link rel="canonical" href="">
@@ -51,6 +52,7 @@
         <a href="metodo.html"><i class="fa-solid fa-star"></i> Il Metodo</a>
         <a href="contatti.html" class="active"><i class="fa-solid fa-location-dot"></i> Contatti</a>
         <div class="mobile-cta">
+            <a data-config-href="tel:{telefonoHref}" href="#" class="btn-outline"><i class="fa-solid fa-phone"></i> Chiama</a>
             <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp</a>
         </div>
     </nav>
@@ -196,10 +198,11 @@
                     <div class="logo-icon">🍕</div>
                     <span><em>Romana</em> Mia</span>
                 </a>
-                <p>La vera pizza romana in teglia a Torino.</p>
+                <p>La vera pizza romana in teglia a Torino. Ingredienti DOP, impasto artigianale, scrocchiarella come da tradizione.</p>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/pizzeriaromanamia/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a data-config-href="https://www.google.com/maps/search/?api=1&query={mappaQuery}" href="#" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-brands fa-google"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -222,8 +225,8 @@
                 <h4>Contatti</h4>
                 <ul>
                     <li><a data-config-href="tel:{telefonoHref}" href="#"><i class="fa-solid fa-phone fa-xs"></i> <span data-config="telefono">011 123 4567</span></a></li>
-                    <li><a href="mailto:info@romanamia.it"><i class="fa-solid fa-envelope fa-xs"></i> info@romanamia.it</a></li>
-                    <li><span><i class="fa-solid fa-location-dot fa-xs"></i> Via Marco Polo, 12/C, Torino</span></li>
+                    <li><a href="mailto:info@romanamia.it"><i class="fa-solid fa-envelope fa-xs"></i> <span data-config="email">info@romanamia.it</span></a></li>
+                    <li><span><i class="fa-solid fa-location-dot fa-xs"></i> <span data-config="indirizzo">Via Marco Polo, 12/C</span>, <span data-config="citta">Torino</span></span></li>
                 </ul>
             </div>
         </div>
@@ -244,9 +247,9 @@
 </a>
 
 <!-- ===== BACK TO TOP ===== -->
-<a id="back-to-top" href="#" aria-label="Torna su">
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Torna su">
     <i class="fa-solid fa-chevron-up"></i>
-</a>
+</button>
 
 <!-- ===== MOBILE BOTTOM NAV ===== -->
 <nav class="bottom-nav" aria-label="Navigazione principale">
