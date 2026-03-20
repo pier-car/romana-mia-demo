@@ -22,10 +22,10 @@ window.SITO = {
   annoCorrente:     new Date().getFullYear(),
 
   // --- CONTATTI ---
-  telefono:         "011 123 4567",        // Numero visualizzato in pagina
-  telefonoHref:     "0111234567",          // Solo cifre, usato per href="tel:..."
-  whatsapp:         "393476147360",        // Prefisso internazionale 39 + numero senza zero iniziale
-  email:            "info@romanamia.it",
+  telefono:         "333 323 0516",        // Numero visualizzato in pagina
+  telefonoHref:     "3333230516",          // Solo cifre, usato per href="tel:..."
+  whatsapp:         "393333230516",        // Prefisso internazionale 39 + numero senza zero iniziale
+  email:            "info@romanamia.it",   // ⚠️ DA AGGIORNARE con l'email reale del titolare
 
   // --- SEDE ---
   indirizzo:        "Via Marco Polo, 12/C",
@@ -46,11 +46,11 @@ window.SITO = {
 
   // --- ORARI ---
   // ✏️ Modifica qui gli orari di apertura
-  orariSettimana:   "Lun–Sab: 11:30–15:00 / 18:30–22:00",
+  orariSettimana:   "Lun–Sab: 11:30–15:00",
   orariSabato:      "Domenica: Chiuso",
 
   // --- DATI LEGALI ---
-  pIva:             "IT10123456789",
+  pIva:             "IT10123456789",       // ⚠️ DA AGGIORNARE con la P.IVA reale
 
   // --- SEO ---
   titoloPagineBase: "Romana Mia — Pizza al Taglio Gourmet a Torino",
@@ -213,7 +213,7 @@ window.SITO = {
           "addressRegion": window.SITO.provincia,
           "addressCountry": "IT"
         },
-        "openingHours": ["Mo-Sa 11:30-15:00", "Mo-Sa 18:30-22:00"],
+        "openingHours": ["Mo-Sa 11:30-15:00"],
         "foundingDate": window.SITO.annoFondazione,
         "url": "https://romanamia.it",
         "sameAs": [window.SITO.instagram]
