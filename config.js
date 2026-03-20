@@ -61,6 +61,25 @@ window.SITO = {
   instagram:        "https://www.instagram.com/pizzeriaromanamia/",
 
   // ============================================================
+  //  📸 INSTAGRAM — Come aggiungere foto dal bancone:
+  //
+  //  Inserisci qui gli URL diretti delle immagini Instagram.
+  //  Il sito popolerà automaticamente la griglia "Direttamente
+  //  dal Bancone" con queste foto.
+  //
+  //  Esempio:
+  //  "https://www.instagram.com/p/XXXXX/media/?size=l",
+  // ============================================================
+  instagramImages: [
+    "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=700&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?q=80&w=700&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?q=80&w=700&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?q=80&w=700&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=700&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?q=80&w=700&auto=format&fit=crop",
+  ],
+
+  // ============================================================
   //  🍕 MENU — Come aggiungere o modificare una pizza:
   //
   //  1. Trova la categoria giusta (Le Classiche, Le Gourmet, ecc.)
@@ -197,9 +216,10 @@ window.SITO = {
       schemaEl.textContent = JSON.stringify(schema, null, 2);
     }
 
-    // Inizializza menu e recensioni se i container esistono
+    // Inizializza menu, recensioni e instagram se i container esistono
     initMenu();
     initRecensioni();
+    initInstagram();
   });
 })();
 
@@ -287,4 +307,43 @@ function initRecensioni() {
       el.classList.add('visible');
     });
   }, 150);
+}
+
+/**
+ * initInstagram() — Genera la griglia "Direttamente dal Bancone"
+ * Le immagini vengono iniettate in #instagram-grid
+ *
+ * ✏️ Per aggiornare le foto: modifica l'array SITO.instagramImages qui sopra
+ */
+function initInstagram() {
+  var grid = document.getElementById('instagram-grid');
+  if (!grid || !window.SITO.instagramImages || !window.SITO.instagramImages.length) return;
+
+  var instagramUrl = window.SITO.instagram || 'https://www.instagram.com/pizzeriaromanamia/';
+
+  // Sanitize a URL: only allow http(s) URLs to prevent javascript: injection
+  function safeUrl(url) {
+    if (typeof url !== 'string') return '';
+    var trimmed = url.trim();
+    return /^https?:\/\//i.test(trimmed) ? trimmed : '';
+  }
+
+  var html = '';
+  window.SITO.instagramImages.forEach(function (url, i) {
+    var safe = safeUrl(url);
+    if (!safe) return;
+    html += '<a href="' + safeUrl(instagramUrl) + '" target="_blank" rel="noopener" class="instagram-item animate-on-scroll">';
+    html += '<img src="' + safe + '" alt="Romana Mia — foto dal bancone ' + (i + 1) + '" loading="lazy">';
+    html += '<div class="instagram-item-overlay"><i class="fa-brands fa-instagram"></i></div>';
+    html += '</a>';
+  });
+
+  grid.innerHTML = html;
+
+  // Rilancia animate-on-scroll per i nuovi elementi
+  setTimeout(function () {
+    document.querySelectorAll('#instagram-grid .animate-on-scroll').forEach(function (el) {
+      el.classList.add('visible');
+    });
+  }, 100);
 }
