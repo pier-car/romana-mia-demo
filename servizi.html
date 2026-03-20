@@ -2,14 +2,17 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Nostro Metodo — Romana Mia, Pizza al Taglio Gourmet Torino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">    <title>Il Nostro Metodo — Romana Mia, Pizza al Taglio Gourmet Torino</title>
     <meta name="description" content="Scopri come facciamo la nostra pizza: impasto romano ad alta idratazione, ingredienti DOP, cottura in teglia. La scrocchiarella autentica a Torino.">
     <meta name="google-site-verification" content="">
     <link rel="canonical" href="">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Il Nostro Metodo — Romana Mia">
     <meta property="og:description" content="Come facciamo la vera pizza romana in teglia: impasto, ingredienti, cottura.">
+    <meta name="theme-color" content="#0A0A0A">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -245,6 +248,26 @@
     <i class="fa-solid fa-chevron-up"></i>
 </a>
 
+<!-- ===== MOBILE BOTTOM NAV ===== -->
+<nav class="bottom-nav" aria-label="Navigazione principale">
+    <a href="index.html" class="bottom-nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+    <a href="index.html#menu" class="bottom-nav-item">
+        <i class="fa-solid fa-pizza-slice"></i>
+        <span>Menu</span>
+    </a>
+    <a href="galleria.html" class="bottom-nav-item">
+        <i class="fa-solid fa-images"></i>
+        <span>Galleria</span>
+    </a>
+    <a href="contatti.html" class="bottom-nav-item">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Contatti</span>
+    </a>
+</nav>
+
 <!-- ===== COOKIE BANNER ===== -->
 <div id="cookie-banner" style="display:none;">
     <p>Utilizziamo cookie tecnici e, previo consenso, cookie di terze parti. <a href="cookie.html">Cookie Policy</a></p>
@@ -273,14 +296,28 @@
         });
     }
 
-    function checkVisible() {
-        document.querySelectorAll('.animate-on-scroll:not(.visible)').forEach(function (el) {
-            if (el.getBoundingClientRect().top < window.innerHeight - 80) el.classList.add('visible');
+    if ('IntersectionObserver' in window) {
+        var animObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    animObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -32px 0px' });
+        document.querySelectorAll('.animate-on-scroll').forEach(function(el) {
+            animObserver.observe(el);
         });
+    } else {
+        function checkVisible() {
+            document.querySelectorAll('.animate-on-scroll:not(.visible)').forEach(function (el) {
+                if (el.getBoundingClientRect().top < window.innerHeight - 40) el.classList.add('visible');
+            });
+        }
+        window.addEventListener('scroll', checkVisible, { passive: true });
+        window.addEventListener('load', checkVisible);
+        setTimeout(checkVisible, 200);
     }
-    window.addEventListener('scroll', checkVisible, { passive: true });
-    window.addEventListener('load', checkVisible);
-    setTimeout(checkVisible, 200);
 
     var consent = localStorage.getItem('cookieConsent');
     var banner = document.getElementById('cookie-banner');
