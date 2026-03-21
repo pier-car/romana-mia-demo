@@ -97,53 +97,11 @@
 <section class="contact-section" id="preventivo">
     <div class="container">
         <div class="contact-grid">
-            <!-- Info colonna sinistra -->
-            <div class="contact-info animate-on-scroll">
-                <h2>Dove Siamo e Come Contattarci</h2>
-
-                <div class="contact-details">
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-solid fa-location-dot"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>Indirizzo</strong>
-                            <span data-config="indirizzo">Via Marco Polo, 12/C</span>,
-                            <span data-config="cap">10129</span> <span data-config="citta">Torino</span> <span data-config="provincia">TO</span>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>Orari</strong>
-                            <span data-config="orariSettimana">Lun–Sab: 11:30–15:00</span><br>
-                            <span data-config="orariSabato">Domenica: Chiuso</span>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>Telefono</strong>
-                            <a data-config-href="tel:{telefonoHref}" href="#" data-config="telefono">333 323 0516</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>Email</strong>
-                            <a href="mailto:info@romanamia.it" data-config="email">info@romanamia.it</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-brands fa-instagram"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>Instagram</strong>
-                            <a href="https://www.instagram.com/pizzeriaromanamia/" target="_blank" rel="noopener">@pizzeriaromanamia</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mappa integrata nell'info -->
+            <!-- Mappa e info compatte -->
+            <div class="contact-map-col animate-on-scroll">
+                <h2>Dove Siamo 📍</h2>
                 <div class="contact-map-wrapper">
-                    <div class="map-container animate-on-scroll">
+                    <div class="map-container">
                         <div id="map-placeholder">
                             <i class="fa-solid fa-map-location-dot"></i>
                             <p>Per visualizzare la mappa è necessario accettare i cookie di Google Maps.</p>
@@ -152,6 +110,10 @@
                         <iframe id="map-iframe" title="Romana Mia su Google Maps" allowfullscreen loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
+                </div>
+                <div class="contact-address-bar">
+                    <p><i class="fa-solid fa-location-dot"></i> <span data-config="indirizzo">Via Marco Polo, 12/C</span>, <span data-config="cap">10129</span> <span data-config="citta">Torino</span> (<span data-config="provincia">TO</span>)</p>
+                    <p><i class="fa-solid fa-clock"></i> <span data-config="orariSettimana">Lun–Sab: 11:30–15:00</span> · <span data-config="orariSabato">Domenica: Chiuso</span></p>
                 </div>
             </div>
 
