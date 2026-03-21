@@ -1592,25 +1592,21 @@ footer {
 
 /* --- 25. METODO / SERVIZI PAGE --- */
 .metodo-section { background: var(--bg-primary); }
+.metodo-section:nth-child(even of .metodo-section) { background: var(--bg-secondary); }
 
 .metodo-grid {
-    display: grid;
-    gap: 80px;
-}
-
-.metodo-section > .container > .metodo-grid > div,
-.metodo-grid > .animate-on-scroll {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 64px;
     align-items: center;
 }
 
-.metodo-grid .reverse {
-    grid-template-columns: 1fr 1fr;
-}
+.metodo-grid.reverse .metodo-image { order: -1; }
 
-.metodo-grid .reverse .metodo-image { order: -1; }
+.metodo-text .number {
+    display: block;
+    margin-bottom: 12px;
+}
 
 .metodo-text .label {
     display: inline-block;
@@ -1656,13 +1652,16 @@ footer {
 .metodo-tag:hover { border-color: var(--border); color: var(--text-primary); }
 
 .metodo-image {
-    border-radius: 4px;
+    border-radius: 6px;
     overflow: hidden;
     aspect-ratio: 4/3;
+    box-shadow: var(--shadow-md);
 }
 
 .metodo-image img {
+    width: 100%;
     height: 100%;
+    object-fit: cover;
     object-position: center;
     transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
 }
@@ -1786,8 +1785,7 @@ footer {
 
     .instagram-grid { grid-template-columns: repeat(3, 1fr); }
 
-    .metodo-section > .container > .metodo-grid > div,
-    .metodo-grid > .animate-on-scroll { gap: 40px; }
+    .metodo-grid { gap: 40px; }
 
     section { padding: 80px 0; }
 }
@@ -1829,12 +1827,11 @@ footer {
     .contact-grid { grid-template-columns: 1fr; }
     .contact-form-card { padding: 28px 20px; }
 
-    .metodo-section > .container > .metodo-grid > div,
-    .metodo-grid > .animate-on-scroll {
+    .metodo-grid {
         grid-template-columns: 1fr;
         gap: 28px;
     }
-    .metodo-grid .reverse .metodo-image { order: 0; }
+    .metodo-grid.reverse .metodo-image { order: 0; }
 
     #whatsapp-float { bottom: 80px; right: 20px; width: 48px; height: 48px; font-size: 1.3rem; }
     #back-to-top { bottom: 136px; right: 20px; }
