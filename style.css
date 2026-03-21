@@ -1430,16 +1430,108 @@ footer {
 }
 
 /* --- 24. CONTACT PAGE --- */
+
+/* Quick-action cards */
+.contact-actions-section {
+    background: var(--bg-secondary);
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.contact-actions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-action-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 32px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s cubic-bezier(0.16,1,0.3,1);
+}
+
+.contact-action-card:hover {
+    border-color: var(--accent);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+}
+
+.contact-action-icon {
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: rgba(197,160,89,0.08);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    font-size: 1.25rem;
+    transition: background 0.3s ease;
+}
+
+.contact-action-card:hover .contact-action-icon {
+    background: rgba(197,160,89,0.15);
+}
+
+.contact-action-card strong {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.contact-action-card > span {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.contact-action-whatsapp {
+    border-color: rgba(37,211,102,0.2);
+}
+
+.contact-action-whatsapp .contact-action-icon {
+    background: rgba(37,211,102,0.08);
+    border-color: rgba(37,211,102,0.25);
+    color: #25d366;
+}
+
+.contact-action-whatsapp:hover {
+    border-color: #25d366;
+    box-shadow: 0 0 48px rgba(37,211,102,0.08);
+}
+
+.contact-action-whatsapp:hover .contact-action-icon {
+    background: rgba(37,211,102,0.15);
+}
+
+/* Main contact section */
 .contact-section { background: var(--bg-primary); }
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     align-items: start;
 }
 
-.contact-info { display: flex; flex-direction: column; gap: 32px; }
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contact-info h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: var(--text-primary);
+}
 
 .contact-detail {
     display: flex;
@@ -1487,13 +1579,17 @@ footer {
 
 .contact-detail-text a:hover { color: var(--accent); }
 
+/* Map embedded in contact info */
+.contact-map-wrapper {
+    margin-top: 8px;
+}
+
 .map-container {
     border-radius: 4px;
     overflow: hidden;
     background: var(--bg-surface);
     border: 1px solid var(--border-subtle);
-    margin-top: 28px;
-    height: 220px;
+    height: 260px;
     position: relative;
 }
 
@@ -1536,17 +1632,34 @@ footer {
 
 .btn-load-map:hover { background: var(--accent-hover); }
 
+/* Contact form card */
 .contact-form-card {
     background: var(--bg-card);
     border: 1px solid var(--border-subtle);
     border-radius: 4px;
     padding: 40px;
+    position: sticky;
+    top: 100px;
 }
 
 .contact-form-card h3 {
     font-size: 1.6rem;
     color: var(--text-primary);
-    margin-bottom: 24px;
+    margin-bottom: 8px;
+}
+
+.contact-form-subtitle {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+    line-height: 1.5;
+}
+
+.honeypot-field { display: none; }
+
+.contact-submit-btn {
+    width: 100%;
+    justify-content: center;
 }
 
 .form-group {
@@ -1778,6 +1891,7 @@ footer {
     .about-image-badge { right: 16px; }
 
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-form-card { position: static; }
 
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
 
@@ -1825,7 +1939,12 @@ footer {
     .footer-bottom { flex-direction: column; text-align: center; gap: 12px; }
 
     .contact-grid { grid-template-columns: 1fr; }
-    .contact-form-card { padding: 28px 20px; }
+    .contact-form-card { padding: 28px 20px; position: static; }
+    .contact-actions-section { padding: 32px 0; }
+    .contact-actions-grid { gap: 12px; }
+    .contact-action-card { padding: 24px 16px; gap: 10px; }
+    .contact-action-icon { width: 48px; height: 48px; font-size: 1.1rem; }
+    .map-container { height: 220px; }
 
     .metodo-grid {
         grid-template-columns: 1fr;
@@ -1864,6 +1983,10 @@ footer {
     .header-right { gap: 10px; }
 
     .gallery-full-grid { grid-template-columns: 1fr; }
+
+    .contact-actions-grid { grid-template-columns: 1fr; gap: 10px; }
+    .contact-action-card { flex-direction: row; padding: 18px 20px; gap: 14px; text-align: left; }
+    .contact-action-icon { width: 44px; height: 44px; font-size: 1rem; flex-shrink: 0; }
 }
 /* --- 29. ADDITIONAL COMPONENT ALIASES --- */
 .contact-details {
