@@ -70,6 +70,29 @@
     </div>
 </section>
 
+<!-- ===== QUICK ACTIONS ===== -->
+<section class="contact-actions-section">
+    <div class="container">
+        <div class="contact-actions-grid">
+            <a data-config-href="tel:{telefonoHref}" href="#" class="contact-action-card animate-on-scroll">
+                <div class="contact-action-icon"><i class="fa-solid fa-phone"></i></div>
+                <strong>Chiamaci</strong>
+                <span data-config="telefono">333 323 0516</span>
+            </a>
+            <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="contact-action-card contact-action-whatsapp animate-on-scroll" target="_blank" rel="noopener">
+                <div class="contact-action-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <strong>WhatsApp</strong>
+                <span>Ordina o chiedi info</span>
+            </a>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Marco+Polo,+12C,+10129+Torino+TO" class="contact-action-card animate-on-scroll" target="_blank" rel="noopener">
+                <div class="contact-action-icon"><i class="fa-solid fa-route"></i></div>
+                <strong>Come Arrivare</strong>
+                <span>Indicazioni stradali</span>
+            </a>
+        </div>
+    </div>
+</section>
+
 <!-- ===== CONTACT SECTION ===== -->
 <section class="contact-section" id="preventivo">
     <div class="container">
@@ -77,7 +100,6 @@
             <!-- Info colonna sinistra -->
             <div class="contact-info animate-on-scroll">
                 <h2>Dove Siamo e Come Contattarci</h2>
-                <p>Siamo aperti da lunedì a sabato a pranzo. Passa a trovarci oppure scrivici su WhatsApp prima di venire.</p>
 
                 <div class="contact-details">
                     <div class="contact-detail">
@@ -89,6 +111,14 @@
                         </div>
                     </div>
                     <div class="contact-detail">
+                        <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div class="contact-detail-text">
+                            <strong>Orari</strong>
+                            <span data-config="orariSettimana">Lun–Sab: 11:30–15:00</span><br>
+                            <span data-config="orariSabato">Domenica: Chiuso</span>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
                         <div class="contact-detail-icon"><i class="fa-solid fa-phone"></i></div>
                         <div class="contact-detail-text">
                             <strong>Telefono</strong>
@@ -96,25 +126,10 @@
                         </div>
                     </div>
                     <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-brands fa-whatsapp"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>WhatsApp</strong>
-                            <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" target="_blank" rel="noopener">Scrivici su WhatsApp</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
                         <div class="contact-detail-icon"><i class="fa-solid fa-envelope"></i></div>
                         <div class="contact-detail-text">
                             <strong>Email</strong>
                             <a href="mailto:info@romanamia.it" data-config="email">info@romanamia.it</a>
-                        </div>
-                    </div>
-                    <div class="contact-detail">
-                        <div class="contact-detail-icon"><i class="fa-solid fa-clock"></i></div>
-                        <div class="contact-detail-text">
-                            <strong>Orari</strong>
-                            <span data-config="orariSettimana">Lun–Sab: 11:30–15:00</span><br>
-                            <span data-config="orariSabato">Domenica: Chiuso</span>
                         </div>
                     </div>
                     <div class="contact-detail">
@@ -126,22 +141,27 @@
                     </div>
                 </div>
 
-                <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                    <a data-config-href="https://wa.me/{whatsapp}?text={whatsappMessaggioEncoded}" href="#" class="btn-whatsapp" target="_blank" rel="noopener">
-                        <i class="fa-brands fa-whatsapp"></i> Ordina su WhatsApp
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=Via+Marco+Polo,+12C,+10129+Torino+TO" target="_blank" rel="noopener" class="btn-outline">
-                        <i class="fa-solid fa-map"></i> Come Arrivare
-                    </a>
+                <!-- Mappa integrata nell'info -->
+                <div class="contact-map-wrapper">
+                    <div class="map-container animate-on-scroll">
+                        <div id="map-placeholder">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <p>Per visualizzare la mappa è necessario accettare i cookie di Google Maps.</p>
+                            <button class="btn-load-map" id="btn-load-map">Mostra la Mappa</button>
+                        </div>
+                        <iframe id="map-iframe" title="Romana Mia su Google Maps" allowfullscreen loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
                 </div>
             </div>
 
             <!-- Form colonna destra -->
             <div class="contact-form-card animate-on-scroll">
                 <h3>Scrivici un Messaggio 📝</h3>
+                <p class="contact-form-subtitle">Per ordini veloci usa WhatsApp! Risponderemo entro 24 ore via email.</p>
                 <form method="POST" action="grazie.html" name="contatti" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contatti">
-                    <p style="display:none;"><label>Non compilare: <input name="bot-field"></label></p>
+                    <p class="honeypot-field"><label>Non compilare: <input name="bot-field"></label></p>
                     <div class="form-group">
                         <label for="nome">Nome e Cognome *</label>
                         <input type="text" id="nome" name="nome" placeholder="Mario Rossi" required>
@@ -154,35 +174,11 @@
                         <label for="messaggio">Messaggio *</label>
                         <textarea id="messaggio" name="messaggio" placeholder="Ciao! Volevo chiedere..." required></textarea>
                     </div>
-                    <button type="submit" class="btn-red" style="width:100%; justify-content:center;">
+                    <button type="submit" class="btn-red contact-submit-btn">
                         <i class="fa-solid fa-paper-plane"></i> Invia Messaggio
                     </button>
-                    <p style="font-size:0.75rem; color:var(--text-muted); margin-top:14px; font-family:'Inter',sans-serif; text-align:center;">
-                        Per ordini veloci usa WhatsApp! Risponderemo entro 24 ore via email.
-                    </p>
                 </form>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ===== MAPPA ===== -->
-<section style="background: var(--bg-primary); padding: 0 0 100px;">
-    <div class="container">
-        <div class="section-header animate-on-scroll" style="padding-top:80px;">
-            <span class="section-eyebrow">Come Trovarci</span>
-            <div class="section-divider"></div>
-            <h2>Siamo qui 📍</h2>
-            <p>Via Marco Polo, 12/C — 10129 Torino — Lun–Sab 11:30–15:00</p>
-        </div>
-        <div class="map-container animate-on-scroll">
-            <div id="map-placeholder">
-                <i class="fa-solid fa-map-location-dot" style="font-size:2.5rem; color:var(--accent);"></i>
-                <p>Per visualizzare la mappa è necessario accettare i cookie di Google Maps.</p>
-                <button class="btn-load-map" id="btn-load-map">Mostra la Mappa</button>
-            </div>
-            <iframe id="map-iframe" title="Romana Mia su Google Maps" allowfullscreen loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
